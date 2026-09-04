@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<style>html{color-scheme:light}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Mission Rising Sun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Newsreader:opsz,wght@6..72,300..600&display=swap">
+<style>
+:root{
+  --paper:#F2E7D5; --paper2:#EBDDC7; --ink:#2B4351; --ink2:#4C6C78;
+  --mid:#93A3A6; --pale:#CFE0E1; --warm:#E9A9A1; --hot:#C24A3C;
+  --rule:#D6C6AC;
+  --disp:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --sp:clamp(1.1rem,4vw,2rem);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--disp);color:var(--ink);margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:var(--hot);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--ink)}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 var(--sp)}
+.measure{max-width:63ch}
+.eyebrow{font-family:var(--disp);font-size:.7rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin:0 0 .9rem}
+.poster-title{font-family:var(--disp);font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:.06em;line-height:.95;color:var(--paper);
+  text-shadow:0 1px 2px rgba(0,0,0,.35),0 4px 18px rgba(0,0,0,.30)}
+
+/* ---------- POSTER ---------- */
+.poster{position:relative;background:var(--ink2);overflow:hidden}
+.poster svg{display:block;width:100%;height:auto}
+.poster .cap{position:absolute;left:0;right:0;top:clamp(1.2rem,5vw,3rem);text-align:center;padding:0 1rem}
+.poster .cap .k{font-family:var(--disp);font-size:.68rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--paper);opacity:.95;margin-bottom:.7rem;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.poster .cap h1{font-size:clamp(2.1rem,8.5vw,5rem)}
+.poster .cap .s{font-family:var(--disp);font-size:clamp(.72rem,2.2vw,.95rem);font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--paper);opacity:1;margin-top:.85rem;text-shadow:0 1px 3px rgba(0,0,0,.55)}
+
+/* ---------- GATE ---------- */
+#gate{min-height:100%}
+.gatebox{max-width:34rem;margin:0 auto;padding:clamp(2rem,7vw,3.4rem) var(--sp) clamp(3rem,9vw,5rem);text-align:center}
+.gatebox h2{font-size:clamp(1.3rem,4.5vw,1.8rem);font-stretch:106%;line-height:1.15;margin-bottom:.8rem}
+.gatebox p.lead{color:var(--ink2);margin-bottom:1.8rem}
+.pwrow{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+input[type=text]{flex:1 1 15rem;min-width:0;background:var(--paper2);border:1.5px solid var(--rule);color:var(--ink);
+  font-family:var(--disp);font-size:1rem;font-weight:500;letter-spacing:.12em;padding:.85rem 1rem;text-align:center;text-transform:uppercase}
+input[type=text]::placeholder{color:var(--mid);letter-spacing:.16em}
+.btn{background:var(--hot);color:var(--paper);font-family:var(--disp);font-size:.76rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;padding:.95rem 1.7rem;border:1.5px solid var(--hot);transition:.18s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:none;color:var(--ink);border-color:var(--rule)}
+.btn.ghost:hover{background:var(--paper2);color:var(--ink)}
+.hint{margin-top:1.7rem;border-top:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule);padding:1.1rem 0;text-align:left}
+.hint .n{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--hot);margin-bottom:.45rem}
+.hint p{margin:0;font-size:1.02rem}
+.shake{animation:sh .4s}
+@keyframes sh{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+
+/* ---------- DOC ---------- */
+section{padding:clamp(2.6rem,7vw,4.4rem) 0;border-bottom:1.5px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+section h2{font-size:clamp(1.55rem,5vw,2.4rem);font-stretch:108%;line-height:1.05;margin-bottom:.5rem}
+section .lead{font-size:1.08rem;color:var(--ink2)}
+.brief{background:var(--ink);color:var(--paper);padding:clamp(1.4rem,4vw,2.2rem);margin-bottom:0}
+.brief .eyebrow{color:var(--warm)}
+.brief h2{color:var(--paper);font-size:clamp(1.35rem,4.4vw,2rem);margin-bottom:.7rem}
+.brief p{color:var(--pale);margin-bottom:0}
+.brief p+p{margin-top:.8em}
+.brief b{color:var(--paper)}
+.deadline{display:inline-block;margin-top:1.3rem;background:var(--hot);color:var(--paper);font-family:var(--disp);
+  font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.6rem 1.1rem}
+
+.ways{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:1.8rem}
+.way{background:var(--paper2);border:1.5px solid var(--rule);padding:1.5rem}
+.way .lbl{font-family:var(--disp);font-size:.68rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--hot);margin-bottom:.6rem}
+.way h3{font-size:1.3rem;font-stretch:104%;margin-bottom:.6rem}
+.way p{font-size:.99rem;margin-bottom:0}
+
+.opts{display:grid;gap:1.1rem;grid-template-columns:1fr;margin-top:1.8rem}
+@media (min-width:760px){.opts{grid-template-columns:repeat(2,1fr)}}
+.opt{background:var(--paper2);border:1.5px solid var(--rule);padding:1.5rem;display:flex;flex-direction:column;gap:.85rem;text-align:left;transition:.18s}
+.opt:hover{border-color:var(--mid)}
+.opt.on{border-color:var(--hot);border-width:1.5px;box-shadow:inset 0 0 0 2px var(--hot)}
+.opt .c{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--hot)}
+.opt h3{font-size:1.35rem;font-stretch:104%;line-height:1.1}
+.opt .when{font-family:var(--disp);font-size:.8rem;font-weight:500;letter-spacing:.05em;color:var(--ink2);margin-top:-.5rem}
+.opt ul{margin:0;padding-left:1.1rem;font-size:.97rem}
+.opt li{margin-bottom:.4rem}
+.opt .hk{font-size:.95rem;border-top:1.5px solid var(--rule);padding-top:.8rem;color:var(--ink2)}
+.opt .hk b{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);display:block;margin-bottom:.3rem}
+.opt .pick{margin-top:auto;font-family:var(--disp);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);border-top:1.5px solid var(--rule);padding-top:.85rem}
+.opt.on .pick{color:var(--hot)}
+
+.scroller{overflow-x:auto;border:1.5px solid var(--rule);margin-top:1.8rem;background:var(--paper2)}
+table{border-collapse:collapse;width:100%;min-width:680px;font-size:.92rem}
+th,td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{font-family:var(--disp);font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:var(--ink)}
+tbody th{font-family:var(--disp);font-weight:700;font-size:.92rem;white-space:nowrap;color:var(--ink)}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+
+.facts{display:grid;gap:.1rem 1.4rem;grid-template-columns:auto 1fr;margin-top:1.6rem;max-width:60ch}
+.facts dt{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--hot);padding-top:.45em}
+.facts dd{margin:0 0 .8rem}
+
+.group{margin-top:2.2rem}
+.group h3{font-family:var(--disp);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--hot);
+  border-bottom:1.5px solid var(--rule);padding-bottom:.55rem;margin-bottom:.3rem}
+.itm{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:.85rem 0;border-bottom:1px solid var(--rule);cursor:pointer}
+.itm:last-child{border-bottom:0}
+.star{width:22px;height:22px;border:1.5px solid var(--mid);border-radius:50%;margin-top:.3rem;flex:none;display:grid;place-items:center;
+  font-size:.8rem;color:transparent;transition:.15s}
+.itm.on .star{background:var(--hot);border-color:var(--hot);color:var(--paper)}
+.itm .nm{font-family:var(--disp);font-weight:600;font-size:1.02rem;color:var(--ink);line-height:1.3}
+.itm.on .nm{color:var(--hot)}
+.itm .nt{font-size:.95rem;color:var(--ink2);margin-top:.15rem}
+.itm .lk{font-family:var(--disp);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-top:.35rem;display:inline-block}
+
+.links{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));margin-top:1.8rem}
+.lk-card{border:1.5px solid var(--rule);background:var(--paper2);padding:1.1rem 1.2rem}
+.lk-card a{font-family:var(--disp);font-weight:700;font-size:.98rem;display:block;margin-bottom:.35rem;text-decoration:none}
+.lk-card a:hover{text-decoration:underline}
+.lk-card p{font-size:.92rem;margin:0;color:var(--ink2)}
+
+.share{margin-top:2rem;border:1.5px solid var(--ink);background:var(--paper2);padding:1.4rem}
+.share label{display:block;font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);margin-bottom:.5rem}
+.share textarea,.share input[type=text]{width:100%;background:var(--paper);border:1.5px solid var(--rule);color:var(--ink);
+  font-family:var(--body);font-size:1rem;padding:.75rem .9rem;text-align:left;text-transform:none;letter-spacing:0}
+.share textarea{min-height:5.5rem;resize:vertical}
+.share pre{font-family:var(--disp);font-size:.82rem;font-weight:500;line-height:1.65;white-space:pre-wrap;background:var(--paper);
+  border:1.5px solid var(--rule);padding:1rem;overflow-x:auto;margin:1rem 0}
+.note{font-size:.95rem;color:var(--ink2);border-left:3px solid var(--warm);padding-left:1rem;margin-top:1.6rem}
+footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
+@media (max-width:560px){.facts{grid-template-columns:1fr;gap:0}.facts dt{padding-top:.6em}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="poster">
+  <svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Berg mit Sonne, Wolkenbändern und Blütenzweig">
+<defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#4E7D8C"/><stop offset="52%" stop-color="#7CA9B5"/><stop offset="100%" stop-color="#BBD2D4"/></linearGradient></defs>
+<linearGradient id="scrimJ" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0C2430" stop-opacity=".70"/><stop offset="55%" stop-color="#0C2430" stop-opacity=".32"/><stop offset="100%" stop-color="#0C2430" stop-opacity="0"/></linearGradient><rect width="800" height="340" fill="url(#sky2)"/>
+<circle cx="400" cy="212" r="86" fill="#D9583F"/>
+<circle cx="400" cy="212" r="86" fill="#E2E1D2" opacity=".14"/>
+<rect x="286" y="206" width="230" height="9" rx="4" fill="#F2E7D5" opacity=".5"/>
+<rect x="234" y="234" width="184" height="11" rx="5" fill="#F2E7D5" opacity=".6"/>
+<rect x="456" y="238" width="126" height="9" rx="4" fill="#F2E7D5" opacity=".5"/>
+<rect x="330" y="92" width="140" height="7" rx="3" fill="#F2E7D5" opacity=".3"/>
+<path d="M0 340 L250 172 L330 232 L400 168 L470 232 L552 172 L800 340 Z" fill="#2B4351" opacity=".18"/>
+<path d="M132 340 L400 132 L668 340 Z" fill="#8FB3BC"/>
+<path d="M240 256 L400 132 L560 256 c-26 6 -40-14 -60-6 c-22 9 -30-12 -50-12 c-20 0 -28 21 -50 12 c-20-8 -34 12 -60 6 z" fill="#F4EBDB"/>
+<path d="M400 132 L560 256 c-26 6 -40-14 -60-6 c-16 7 -25-4 -38-9 z" fill="#DCD2C0"/>
+<path d="M0 292 C120 276 210 302 330 296 C460 290 580 310 800 292 L800 340 L0 340 Z" fill="#2B4351"/>
+<g fill="#22343F">
+<path d="M96 340 l16-34 16 34z"/><path d="M150 340 l13-28 13 28z"/><path d="M628 340 l14-30 14 30z"/><path d="M676 340 l12-26 12 26z"/>
+</g>
+<rect width="800" height="212" fill="url(#scrimJ)"/>
+<g stroke="#3A2B28" stroke-width="6" fill="none" stroke-linecap="round">
+<path d="M-6 34 C70 44 118 20 176 44 C226 64 268 46 306 66"/>
+<path d="M96 36 C110 12 132 6 150 10"/><path d="M214 54 C232 34 254 30 268 34"/>
+</g>
+<g fill="#E9A9A1">
+<circle cx="52" cy="34" r="13"/><circle cx="98" cy="22" r="10"/><circle cx="146" cy="12" r="12"/><circle cx="132" cy="42" r="11"/>
+<circle cx="192" cy="44" r="13"/><circle cx="236" cy="34" r="10"/><circle cx="268" cy="34" r="12"/><circle cx="288" cy="58" r="9"/>
+<circle cx="14" cy="56" r="9"/><circle cx="76" cy="58" r="8"/><circle cx="170" cy="62" r="8"/>
+</g>
+<g fill="#F2E7D5" opacity=".85"><circle cx="60" cy="30" r="4"/><circle cx="150" cy="10" r="4"/><circle cx="196" cy="40" r="4"/><circle cx="270" cy="32" r="3.5"/></g>
+
+</svg>
+  <div class="cap">
+    <div class="k">Akte EH-2627</div>
+    <h1 class="poster-title">Mission Rising Sun</h1>
+    <div class="s">Tokio &middot; Kamakura &middot; Mai 2027</div>
+  </div>
+</div>
+
+<div id="gate">
+  <div class="gatebox">
+    <h2>Diese Seite ist mit einem Passwort verschlossen.</h2>
+    <p class="lead">Ein Wort öffnet sie. Wenn du an Japan denkst, siehst du es wahrscheinlich sofort vor dir.</p>
+    <form class="pwrow" id="pwform" autocomplete="off">
+      <input type="text" id="pw" placeholder="Passwort" aria-label="Passwort" autocomplete="off" spellcheck="false">
+      <button class="btn" type="submit">Öffnen</button>
+    </form>
+    <div class="hint" id="hint"></div>
+  </div>
+</div>
+
+<div id="doc" hidden><section class="brief"><div class="wrap measure"><p class="eyebrow">Deine Aufgabe</p><h2>Bring eine eigene Idee mit.</h2><p>Unten stehen Vorschläge — markiere, was dich anspricht. Aber das ist nur der Anfang. Such danach selbst weiter: in den Links, auf Karten, auf YouTube, wo du willst.</p><p>Am Sonntag bringt jede und jeder <b>mindestens eine eigene Idee</b> für einen Programmpunkt mit. Egal ob groß oder klein: ein Museum, ein Laden, ein Gericht, ein Bahnhof, ein Aussichtspunkt, ein Tagesausflug. Hauptsache, du hast sie selbst gefunden.</p><div class="deadline">Wir sprechen darüber: Sonntag, 13. September</div></div></section><section><div class="wrap"><div class="measure"><p class="eyebrow">Der Rahmen</p><h2>Zehn Nächte im Mai 2027</h2><p class="lead">Das steht schon fest. Alles andere nicht.</p><dl class="facts"><dt>Hinflug</dt><dd>Freitag, 14. Mai 2027, abends ab Frankfurt.</dd><dt>Rückflug</dt><dd>Dienstag, 25. Mai 2027. Zehn Nächte dazwischen.</dd><dt>Basis</dt><dd>Onkel wohnt in Kamakura — 58 Minuten mit der Yokosuka-Linie bis Tokio Hauptbahnhof. Wir besuchen ihn und übernachten dort.</dd><dt>Wetter</dt><dd>Golden Week ist am 5. Mai vorbei, die Regenzeit beginnt statistisch erst am 7. Juni. Wir liegen genau in der Lücke: um 23 Grad, warm, aber nicht schwül.</dd><dt>Glücksfall</dt><dd>Das Sumo-Maiturnier läuft vom 9. bis 23. Mai in Tokio. Und in Kyoto ist am 15. Mai Aoi Matsuri, eines der drei großen Feste der Stadt.</dd></dl></div></div></section><section><div class="wrap"><div class="measure"><p class="eyebrow">Die offene Frage</p><h2>Nur Tokio und Kamakura — oder auch Kyoto?</h2><p class="lead">Diese Frage entscheiden wir nicht am Sonntag. Aber denk beim Stöbern daran, wo deine Favoriten liegen.</p></div><div class="ways"><div class="way"><div class="lbl">Variante 1</div><h3>Nur der Osten</h3><p>Kamakura, Tokio, Hakone. Kein Tag geht im Zug verloren, wir ziehen höchstens zweimal um, und es bleibt Zeit für Nikko, Fuji-Q und lange Abende in Tokio. Das alte Tempel-Japan heben wir uns dann für eine andere Reise auf.</p></div><div class="way"><div class="lbl">Variante 2</div><h3>Mit Kyoto und Osaka</h3><p>Kyoto und Nara kommen dazu, dazu vielleicht das Manga-Museum, Nintendo World und Den Den Town. Dafür brauchen wir zwei Reisetage, und Nikko und Fuji-Q wären dann für ein nächstes Mal dran.</p></div></div></div></section><section><div class="wrap"><div class="measure"><p class="eyebrow">Die Vorschläge</p><h2>Was wir schon gefunden haben</h2><p class="lead">Tippe an, was dich interessiert. Jeder Eintrag hat einen Link zum Weiterlesen. Es ist völlig in Ordnung, wenn dich nur drei Sachen ansprechen — Hauptsache, du weißt, welche.</p></div><div class="group"><h3>Klassiker & Kultur</h3><div class="itm" data-k="Sumo-Turnier in Ryōgoku"><div class="star">&#10003;</div><div><div class="nm">Sumo-Turnier in Ryōgoku</div><div class="nt">Das Maiturnier läuft genau in unserem Fenster, vom 9. bis 23. Mai. Die oberste Liga kämpft ab 16 Uhr, der Finaltag ist Sonntag der 23.</div><a class="lk" href="https://japan-event.info/en/articles/grand-sumo-2027-schedule-tickets" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Der große Buddha in Kamakura"><div class="star">&#10003;</div><div><div class="nm">Der große Buddha in Kamakura</div><div class="nt">Elf Meter Bronze, seit 1252 unter freiem Himmel. Zehn Minuten von Onkels Haustür.</div><a class="lk" href="https://www.japan-guide.com/e/e3100.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Hōkoku-ji — der Bambustempel"><div class="star">&#10003;</div><div><div class="nm">Hōkoku-ji — der Bambustempel</div><div class="nt">Über zweitausend Bambushalme, und man kann mitten im Hain Matcha trinken.</div><a class="lk" href="https://www.japan-guide.com/e/e3120.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Der Daibutsu-Wanderweg"><div class="star">&#10003;</div><div><div class="nm">Der Daibutsu-Wanderweg</div><div class="nt">Anderthalb Stunden über den Bergrücken von Kita-Kamakura bis zum großen Buddha. Verbindet zwei Ecken der Stadt zu Fuß.</div><a class="lk" href="https://www.japan-guide.com/e/e3113.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Kyoto: Fushimi Inari und Arashiyama"><div class="star">&#10003;</div><div><div class="nm">Kyoto: Fushimi Inari und Arashiyama</div><div class="nt">Tausende rote Torii einen Berg hoch, und der Bambuswald am anderen Ende der Stadt. Kostet uns zwei Reisetage.</div><a class="lk" href="https://www.japan-guide.com/e/e3915.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Nikko"><div class="star">&#10003;</div><div><div class="nm">Nikko</div><div class="nt">Weltkulturerbe im Bergwald, von Tokio aus gut an einem Tag zu schaffen — von Kamakura aus braucht es etwas mehr Zeit.</div><a class="lk" href="https://www.japan-guide.com/e/e3805.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Hakone mit Onsen"><div class="star">&#10003;</div><div><div class="nm">Hakone mit Onsen</div><div class="nt">Vulkanisches Tal, Seilbahnen, Schiff über den Ashi-See — und heiße Quellen. Es gibt private Familienbäder, falls niemand Lust auf nackt in der Gruppe hat.</div><a class="lk" href="https://www.japan-guide.com/e/e2358_008.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Surfstunde in Kamakura"><div class="star">&#10003;</div><div><div class="nm">Surfstunde in Kamakura</div><div class="nt">Yuigahama hat die gleichmäßigsten Wellen für Anfänger. Mitte Mai hat das Wasser 17 Grad, also mit Neopren.</div><a class="lk" href="https://www.vialala.com/en/blog/surf-a-kamakura" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Baseball in Yokohama"><div class="star">&#10003;</div><div><div class="nm">Baseball in Yokohama</div><div class="nt">Dreißig Minuten von Kamakura, und die Fangesänge sind das eigentliche Erlebnis.</div><a class="lk" href="https://watabi.org/en/articles/japan-baseball-guide" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div></div><div class="group"><h3>Stadt & Nervenkitzel</h3><div class="itm" data-k="teamLab Planets"><div class="star">&#10003;</div><div><div class="nm">teamLab Planets</div><div class="nt">Barfuß durch knietiefes Wasser und Lichtprojektionen. Kurze Hose anziehen.</div><a class="lk" href="https://tokyocheapo.com/entertainment/museums-and-exhibitions/everything-you-need-to-know-about-teamlab-planets/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="teamLab Borderless"><div class="star">&#10003;</div><div><div class="nm">teamLab Borderless</div><div class="nt">Die andere teamLab-Variante: labyrinthisch, über fünfzig Werke, künstlerischer als Planets. Eines von beiden reicht.</div><a class="lk" href="https://tokyocheapo.com/entertainment/museums-and-exhibitions/mori-building-digital-art-museum-teamlab-borderless/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Shibuya Sky"><div class="star">&#10003;</div><div><div class="nm">Shibuya Sky</div><div class="nt">Offene Dachterrasse in 229 Metern über der berühmtesten Kreuzung der Welt. Die Sonnenuntergangs-Slots sind früh weg.</div><a class="lk" href="https://tokyocheapo.com/place/shibuya-sky/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Fuji-Q Highland"><div class="star">&#10003;</div><div><div class="nm">Fuji-Q Highland</div><div class="nt">Takabisha hat den steilsten Abwurf der Welt: 121 Grad. Dazu Eejanaika und Fujiyama, mit dem Berg im Hintergrund.</div><a class="lk" href="https://www.japan-guide.com/e/e6918.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Tokyo DisneySea"><div class="star">&#10003;</div><div><div class="nm">Tokyo DisneySea</div><div class="nt">Für unser Alter fast immer besser als Disneyland. Fantasy Springs ist der neue Teil.</div><a class="lk" href="https://tdrexplorer.com/tokyo-disneyland-tickets/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Super Nintendo World in Osaka"><div class="star">&#10003;</div><div><div class="nm">Super Nintendo World in Osaka</div><div class="nt">Nur wenn wir nach Kansai fahren. Gut zu wissen: Für diesen Bereich braucht man zusätzlich zum Parkeintritt ein eigenes Zeitfenster-Ticket.</div><a class="lk" href="https://kanko-map.com/en/super-nintendo-world-guide/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Karaoke bis in die Nacht"><div class="star">&#10003;</div><div><div class="nm">Karaoke bis in die Nacht</div><div class="nt">Eigene Box, japanischer und internationaler Katalog, keine Reservierung nötig.</div><a class="lk" href="https://kanko-map.com/en/karaoke-price-compare/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div></div><div class="group"><h3>Manga & Popkultur</h3><div class="itm" data-k="Kyoto International Manga Museum"><div class="star">&#10003;</div><div><div class="nm">Kyoto International Manga Museum</div><div class="nt">Fünfzigtausend Bände in offenen Regalen, die man einfach rausziehen und im Haus oder draußen auf der Wiese lesen darf — auch auf Deutsch und Englisch. In einer Grundschule von 1869. Mittwochs Ruhetag.</div><a class="lk" href="https://kyotomm.jp/en/opentime-cost/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Shibuya PARCO, sechster Stock"><div class="star">&#10003;</div><div><div class="nm">Shibuya PARCO, sechster Stock</div><div class="nt">Nintendo Tokyo, Pokémon Center, Jump Shop und Capcom Store in einem einzigen Aufzug. Eintritt frei.</div><a class="lk" href="https://tripmate.news/posts/shibuya-parco-nintendo-pokemon-guide/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Nakano Broadway"><div class="star">&#10003;</div><div><div class="nm">Nakano Broadway</div><div class="nt">Ein Dutzend Mandarake-Filialen in einem Einkaufszentrum, das seit 1966 stehengeblieben ist. Gebraucht, selten, für Sammler ergiebiger als Akihabara.</div><a class="lk" href="https://www.japan-guide.com/e/e3069.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Animate Ikebukuro"><div class="star">&#10003;</div><div><div class="nm">Animate Ikebukuro</div><div class="nt">Der größte Anime-Laden der Welt, komplettes Aktuellsortiment über mehrere Etagen.</div><a class="lk" href="https://otakucompass.world/en/articles/animate-ikebukuro" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Otome Road, Ikebukuro"><div class="star">&#10003;</div><div><div class="nm">Otome Road, Ikebukuro</div><div class="nt">Die Straße hinter Animate: Doujinshi, Manga-Antiquariate, Themencafés.</div><a class="lk" href="https://livejapan.com/en/in-tokyo/in-pref-tokyo/in-ikebukuro/article-a0005093/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Akihabara"><div class="star">&#10003;</div><div><div class="nm">Akihabara</div><div class="nt">Retro-Games über sieben Etagen, Spielhallen, Gachapon-Hallen, Radio Kaikan. Öffnet erst gegen Mittag — also nachmittags hin. Sonntags ist die Hauptstraße Fußgängerzone.</div><a class="lk" href="https://www.japan-pop-now.com/articles/akihabara-complete-guide-2026" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Ghibli-Museum Mitaka"><div class="star">&#10003;</div><div><div class="nm">Ghibli-Museum Mitaka</div><div class="nt">Mit Zeitfenster-Ticket, das wir schon Monate vorher besorgen. Dienstags Ruhetag.</div><a class="lk" href="https://www.ghibli-museum.jp/en/tickets/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Fujiko F. Fujio Museum, Kawasaki"><div class="star">&#10003;</div><div><div class="nm">Fujiko F. Fujio Museum, Kawasaki</div><div class="nt">Das Doraemon-Museum, mit hervorragend präsentierten Originalzeichnungen. Lohnt besonders, wenn man selbst zeichnet. Dienstags Ruhetag.</div><a class="lk" href="https://fujiko-museum.com/ticket/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Suginami Animation Museum"><div class="star">&#10003;</div><div><div class="nm">Suginami Animation Museum</div><div class="nt">Erklärt, wie ein Anime tatsächlich entsteht — Storyboard, Zwischenphasen, Synchronisation, mit Mitmachstationen. Eintritt frei, und es liegt fast auf dem Weg zum Ghibli-Museum.</div><a class="lk" href="https://www.gltjp.com/en/directory/item/13948/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Pokémon Café"><div class="star">&#10003;</div><div><div class="nm">Pokémon Café</div><div class="nt">Reservierung genau einunddreißig Tage vorher, auf die Minute — dann klappt es.</div><a class="lk" href="https://www.pokemon-cafe.jp/en/cafe/faq/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Osamu Tezuka Manga Museum"><div class="star">&#10003;</div><div><div class="nm">Osamu Tezuka Manga Museum</div><div class="nt">Tezuka ist der Gott des Manga — Astro Boy, Black Jack — und der Erfinder der Bildsprache, die alles Spätere prägt. Liegt bei Osaka, also nur mit Kansai-Etappe.</div><a class="lk" href="https://en.osaka-info.jp/osaka/pop-culture/pop-culture-tezukaosamu-museum/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Den Den Town, Osaka"><div class="star">&#10003;</div><div><div class="nm">Den Den Town, Osaka</div><div class="nt">Osakas Akihabara, entspannter und weniger touristisch. Nur mit Kansai-Etappe.</div><a class="lk" href="https://japan-pop-now.com/osaka-anime-guide-den-den-town/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Book-Off"><div class="star">&#10003;</div><div><div class="nm">Book-Off</div><div class="nt">Die Gebrauchtbuchkette. Manga-Bände für sehr wenig Geld, Filialen überall.</div><a class="lk" href="https://tokyocheapo.com/place/book-off/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div></div><div class="group"><h3>Kunst</h3><div class="itm" data-k="Tokyo National Museum, Ueno"><div class="star">&#10003;</div><div><div class="nm">Tokyo National Museum, Ueno</div><div class="nt">Der beste Überblick über japanische Kunstgeschichte, von Buddha-Statuen bis zur Samurai-Rüstungsabteilung. Alle unter 18 kommen umsonst rein.</div><a class="lk" href="https://www.tnm.jp/modules/r_free_page/index.php?id=113&lang=en" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Artizon Museum"><div class="star">&#10003;</div><div><div class="nm">Artizon Museum</div><div class="nt">Impressionisten bis japanische Moderne im schönsten neuen Museumsbau Tokios. Oberschüler bis Doktoranden zahlen nichts.</div><a class="lk" href="https://www.artizon.museum/en/ticket/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Mori Art Museum, Roppongi"><div class="star">&#10003;</div><div><div class="nm">Mori Art Museum, Roppongi</div><div class="nt">Zeitgenössische Kunst im 53. Stock, bis 22 Uhr geöffnet, Aussichtsplattform im Ticket. Der Kunstort, an dem auch Kunstmüde bei Laune bleiben.</div><a class="lk" href="https://www.mori.art.museum/en/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Ota Memorial Museum of Art"><div class="star">&#10003;</div><div><div class="nm">Ota Memorial Museum of Art</div><div class="nt">Ukiyo-e-Holzschnitte, direkt neben der Takeshita-dōri. Eine Stunde, und man versteht, woher der Manga kommt.</div><a class="lk" href="https://www.ukiyoe-ota-muse.jp/eng/information/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Yayoi Kusama Museum"><div class="star">&#10003;</div><div><div class="nm">Yayoi Kusama Museum</div><div class="nt">Klein, fünf Etagen, nur Donnerstag bis Sonntag. Tickets gibt es am 1. des übernächsten Monats um zwei Uhr nachts unserer Zeit.</div><a class="lk" href="https://yayoikusamamuseum.jp/en/visit/tickets/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="The National Art Center Tokyo"><div class="star">&#10003;</div><div><div class="nm">The National Art Center Tokyo</div><div class="nt">Riesige Wechselausstellungen unter einer Glaswelle in Roppongi.</div><a class="lk" href="https://www.nact.jp/english/ticket/index.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="21_21 Design Sight"><div class="star">&#10003;</div><div><div class="nm">21_21 Design Sight</div><div class="nt">Designmuseum von Tadao Ando, halb unter der Erde. Kleine, sehr gut kuratierte Ausstellungen.</div><a class="lk" href="https://2121designsight.jp/en/information/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Nezu Museum"><div class="star">&#10003;</div><div><div class="nm">Nezu Museum</div><div class="nt">Ostasiatische Kunst und ein japanischer Garten mitten in Aoyama, der den Besuch allein wert ist.</div><a class="lk" href="https://www.nezu-muse.or.jp/en/visit/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Kyocera Museum of Art, Kyoto"><div class="star">&#10003;</div><div><div class="nm">Kyocera Museum of Art, Kyoto</div><div class="nt">Kyotos großes Kunstmuseum, und fünf Gehminuten gegenüber liegt das Nationalmuseum für moderne Kunst. Zwei starke Häuser an einem Nachmittag.</div><a class="lk" href="https://kyotocity-kyocera.museum/en/info" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Kunsthandwerk selbst machen in Kyoto"><div class="star">&#10003;</div><div><div class="nm">Kunsthandwerk selbst machen in Kyoto</div><div class="nt">Holzschnitt drucken, Stoff färben, töpfern. Zwei Stunden, und man hat am Ende etwas in der Hand statt nur Fotos.</div><a class="lk" href="https://en.kyotohandicraftcenter.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div></div><div class="group"><h3>Shopping</h3><div class="itm" data-k="Shimokitazawa"><div class="star">&#10003;</div><div><div class="nm">Shimokitazawa</div><div class="nt">Die dichteste Vintage- und Second-Hand-Gegend Tokios, ein ganzes Viertel aus kleinen Läden. Öffnet erst gegen Mittag.</div><a class="lk" href="https://japantravel.navitime.com/en/area/jp/guide/NTJtrv1113-en/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Harajuku: Takeshita-dōri und Cat Street"><div class="star">&#10003;</div><div><div class="nm">Harajuku: Takeshita-dōri und Cat Street</div><div class="nt">Crêpes, Purikura, Second Hand und Sneaker auf der einen Straße — und die ruhigere, coolere Cat Street gleich daneben.</div><a class="lk" href="https://www.japan-guide.com/e/e3007.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Ginza: Uniqlo und Muji"><div class="star">&#10003;</div><div><div class="nm">Ginza: Uniqlo und Muji</div><div class="nt">Die Mutterhäuser, jeweils über mehrere Etagen. Drumherum das teuerste Pflaster Tokios zum Anschauen.</div><a class="lk" href="https://www.kanpai-japan.com/tokyo/muji-ginza-flagship-store" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Kappabashi"><div class="star">&#10003;</div><div><div class="nm">Kappabashi</div><div class="nt">Die Straße der Küchenausstatter: Messer, Keramik, und die berühmten Plastik-Essensmodelle. Sonntags Ruhetag.</div><a class="lk" href="https://www.japan-guide.com/e/e3020.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Nishiki-Markt und Teramachi, Kyoto"><div class="star">&#10003;</div><div><div class="nm">Nishiki-Markt und Teramachi, Kyoto</div><div class="nt">Kyotos Marktgasse mit Essensständen, dazu die überdachten Einkaufsarkaden mit Keramik, Papier und Textil.</div><a class="lk" href="https://www.japan-guide.com/e/e3944.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div><div class="itm" data-k="Shinsaibashi und Amerikamura, Osaka"><div class="star">&#10003;</div><div><div class="nm">Shinsaibashi und Amerikamura, Osaka</div><div class="nt">Osakas Einkaufsmeile und daneben das Vintage-Viertel. Nur mit Kansai-Etappe.</div><a class="lk" href="https://en.osaka-info.jp/spot/shinsaibashi-suji-shopping-street/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mehr dazu &rarr;</a></div></div></div><p class="note">Preise stehen hier bewusst nirgends. Ums Geld kümmert sich die Expeditionsleitung — ihr kümmert euch um die Ideen.</p><div class="share"><label for="idea">Meine eigene Idee &mdash; und warum</label><textarea id="idea" placeholder="Ich habe … gefunden. Das will ich machen, weil …"></textarea><pre id="out">Markiere oben ein paar Favoriten.</pre><button class="btn ghost" data-copy="out" type="button">Kopieren und in die Familiengruppe</button></div></div></section><section><div class="wrap"><div class="measure"><p class="eyebrow">Selbst weitersuchen</p><h2>Wo du suchen kannst</h2><p class="lead">Das Ziel ist nicht, diese Liste abzuarbeiten. Das Ziel ist, dass du etwas findest, das hier noch nicht steht.</p></div><div class="links"><div class="lk-card"><a href="https://www.japan-guide.com/" target="_blank" rel="noopener">japan-guide.com</a><p>Das Standardnachschlagewerk für Japan. Zu fast jedem Ort ein Artikel mit Anfahrt, Zeiten und ehrlicher Einschätzung. Hier fängt man an.</p></div><div class="lk-card"><a href="https://tokyocheapo.com/" target="_blank" rel="noopener">Tokyo Cheapo</a><p>Tokio von unten: Läden, Cafés, Viertel, Eintrittspreise, Tipps, die in keinem Reiseführer stehen.</p></div><div class="lk-card"><a href="https://japantravel.navitime.com/en/" target="_blank" rel="noopener">Navitime Travel Guide</a><p>Gut für Stadtviertel und Tagesrouten — und die zugehörige App plant Bahnverbindungen besser als Google Maps.</p></div><div class="lk-card"><a href="https://livejapan.com/en/" target="_blank" rel="noopener">Live Japan</a><p>Sehr viel zu Shopping, Popkultur und Vierteln, mit Fotos von den Läden selbst.</p></div><div class="lk-card"><a href="https://www.japan-pop-now.com/" target="_blank" rel="noopener">Japan Pop Now</a><p>Ausführliche Guides zu Akihabara, Den Den Town und Manga-Läden. Wer wo was findet.</p></div><div class="lk-card"><a href="https://otakucompass.world/en/" target="_blank" rel="noopener">Otaku Compass</a><p>Anime- und Manga-Orte in Japan, Laden für Laden. Auch zu Themencafés und Events.</p></div><div class="lk-card"><a href="https://www.discoverkyoto.com/event-calendar/may/" target="_blank" rel="noopener">Discover Kyoto — Eventkalender Mai</a><p>Welche Feste in Kyoto im Mai laufen. Wichtig für uns: Aoi Matsuri am 15. Mai.</p></div><div class="lk-card"><a href="https://osaka-info.jp/en/" target="_blank" rel="noopener">Osaka Info</a><p>Die offizielle Seite der Stadt Osaka, mit einer eigenen Popkultur-Abteilung.</p></div><div class="lk-card"><a href="https://www.japan.travel/de/de/" target="_blank" rel="noopener">Japan National Tourism Organization</a><p>Die offizielle Tourismusseite, auf Deutsch. Gut für Überblick, Regionen und Feste.</p></div><div class="lk-card"><a href="https://www.timeout.com/tokyo" target="_blank" rel="noopener">Time Out Tokyo</a><p>Was gerade läuft: Ausstellungen, Pop-ups, Konzerte, neue Läden.</p></div><div class="lk-card"><a href="https://www.gotokyo.org/en/" target="_blank" rel="noopener">Go Tokyo</a><p>Die offizielle Seite der Stadt Tokio: Stadtviertel, Veranstaltungskalender, Museen — ohne Werbeinteresse.</p></div><div class="lk-card"><a href="https://maps.google.com/" target="_blank" rel="noopener">Google Maps</a><p>Unterschätzt: Straßenansicht anschauen, Fotos von Gästen lesen, Öffnungszeiten prüfen. Man weiß vorher, wie es aussieht.</p></div></div></div></section>
+<footer><div class="wrap">Akte EH-2627 · Mission Rising Sun · Stand 04.09.2026</div></footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var KEY="eh_sun", TARGET=1744223809;
+var HINTS=["Ein Wort, acht Buchstaben. Es ist der höchste Punkt eines ganzen Landes, ein schlafender Vulkan — und seit 2013 UNESCO-Welterbe, bemerkenswerterweise nicht als Naturdenkmal, sondern als Kulturstätte.", "Er ist 3.776 Meter hoch. Auf Japanisch trägt er mehrere Namen; gesucht ist die alte Lesart, die sich im Westen durchgesetzt hat.", "Diese Lesart endet auf -yama. Das ist das japanische Wort für Berg. Der Rest sind vier Buchstaben und beginnt mit F.", "Letzter Tipp: Such nach <em>höchster Berg Japans alte westliche Bezeichnung yama</em>. Ein Wort, acht Buchstaben, Groß- und Kleinschreibung egal."];
+function hash(s){var h=5381,i;for(i=0;i<s.length;i++){h=((h*33)^s.charCodeAt(i))>>>0}return h}
+function norm(s){return (s||"").toLowerCase().replace(/[^a-z0-9äöüß]/g,"").replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss")}
+function LSget(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}}
+function LSset(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+var gate=document.getElementById("gate"),doc=document.getElementById("doc"),hintEl=document.getElementById("hint");
+var tries=LSget(KEY+"_t",0);
+function showHint(){
+  var i=Math.min(tries,HINTS.length-1);
+  hintEl.innerHTML='<div class="n">'+(i===0?"Tipp":"Tipp "+(i+1))+'</div><p>'+HINTS[i]+'</p>';
+}
+function open_(){gate.hidden=true;doc.hidden=false;window.scrollTo(0,0);init()}
+if(LSget(KEY,false)){open_()}else{showHint()}
+document.getElementById("pwform").addEventListener("submit",function(e){
+  e.preventDefault();
+  var inp=document.getElementById("pw");
+  if(hash(norm(inp.value))===TARGET){LSset(KEY,true);open_();return}
+  tries++;LSset(KEY+"_t",tries);showHint();
+  inp.value="";inp.classList.remove("shake");void inp.offsetWidth;inp.classList.add("shake");
+});
+
+function init(){
+  if(init.done)return;init.done=true;
+  
+  var favs=LSget("eh_sun_favs",{}), idea=document.getElementById("idea");
+  idea.value=LSget("eh_sun_idea","");
+  var items=Array.prototype.slice.call(document.querySelectorAll(".itm"));
+  function render(){
+    var chosen=[];
+    items.forEach(function(el){
+      var k=el.getAttribute("data-k"),on=!!favs[k];
+      el.classList.toggle("on",on);
+      if(on)chosen.push(k);
+    });
+    var out=document.getElementById("out");
+    var t="MISSION RISING SUN - "+(chosen.length?"meine Favoriten":"noch keine Favoriten")+"\n";
+    t+=chosen.length?chosen.map(function(c){return "  - "+c}).join("\n"):"  (noch nichts markiert)";
+    if(idea.value.trim())t+="\n\nMEINE EIGENE IDEE\n"+idea.value.trim();
+    out.textContent=t;
+  }
+  items.forEach(function(el){
+    el.addEventListener("click",function(){
+      var k=el.getAttribute("data-k");
+      if(favs[k]){delete favs[k]}else{favs[k]=1}
+      LSset("eh_sun_favs",favs);render();
+    });
+  });
+  idea.addEventListener("input",function(){LSset("eh_sun_idea",idea.value);render()});
+  render();
+
+  var cp=document.querySelectorAll("[data-copy]");
+  Array.prototype.forEach.call(cp,function(b){
+    b.addEventListener("click",function(){
+      var t=document.getElementById(b.getAttribute("data-copy")).textContent,old=b.textContent;
+      function ok(){b.textContent="Kopiert";setTimeout(function(){b.textContent=old},1600)}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,ok)}
+      else{var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();
+        try{document.execCommand("copy")}catch(e){}document.body.removeChild(ta);ok()}
+    });
+  });
+}
+})();
+</script>
+</body>
+</html>

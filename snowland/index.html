@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<style>html{color-scheme:light}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Mission Snowland</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Newsreader:opsz,wght@6..72,300..600&display=swap">
+<style>
+:root{
+  --paper:#F3EADB; --paper2:#EDE2D0; --ink:#1E3550; --ink2:#3F5E7C;
+  --mid:#8A9AA8; --pale:#CBDAE5; --warm:#E9A84C; --hot:#C9542F;
+  --rule:#D2C4AC;
+  --disp:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --sp:clamp(1.1rem,4vw,2rem);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--disp);color:var(--ink);margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:var(--hot);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--ink)}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 var(--sp)}
+.measure{max-width:63ch}
+.eyebrow{font-family:var(--disp);font-size:.7rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);margin:0 0 .9rem}
+.poster-title{font-family:var(--disp);font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:.06em;line-height:.95;color:var(--paper);
+  text-shadow:0 1px 2px rgba(0,0,0,.35),0 4px 18px rgba(0,0,0,.30)}
+
+/* ---------- POSTER ---------- */
+.poster{position:relative;background:var(--ink2);overflow:hidden}
+.poster svg{display:block;width:100%;height:auto}
+.poster .cap{position:absolute;left:0;right:0;top:clamp(1.2rem,5vw,3rem);text-align:center;padding:0 1rem}
+.poster .cap .k{font-family:var(--disp);font-size:.68rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--paper);opacity:.95;margin-bottom:.7rem;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.poster .cap h1{font-size:clamp(2.1rem,8.5vw,5rem)}
+.poster .cap .s{font-family:var(--disp);font-size:clamp(.72rem,2.2vw,.95rem);font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--paper);opacity:1;margin-top:.85rem;text-shadow:0 1px 3px rgba(0,0,0,.55)}
+
+/* ---------- GATE ---------- */
+#gate{min-height:100%}
+.gatebox{max-width:34rem;margin:0 auto;padding:clamp(2rem,7vw,3.4rem) var(--sp) clamp(3rem,9vw,5rem);text-align:center}
+.gatebox h2{font-size:clamp(1.3rem,4.5vw,1.8rem);font-stretch:106%;line-height:1.15;margin-bottom:.8rem}
+.gatebox p.lead{color:var(--ink2);margin-bottom:1.8rem}
+.pwrow{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+input[type=text]{flex:1 1 15rem;min-width:0;background:var(--paper2);border:1.5px solid var(--rule);color:var(--ink);
+  font-family:var(--disp);font-size:1rem;font-weight:500;letter-spacing:.12em;padding:.85rem 1rem;text-align:center;text-transform:uppercase}
+input[type=text]::placeholder{color:var(--mid);letter-spacing:.16em}
+.btn{background:var(--hot);color:var(--paper);font-family:var(--disp);font-size:.76rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;padding:.95rem 1.7rem;border:1.5px solid var(--hot);transition:.18s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:none;color:var(--ink);border-color:var(--rule)}
+.btn.ghost:hover{background:var(--paper2);color:var(--ink)}
+.hint{margin-top:1.7rem;border-top:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule);padding:1.1rem 0;text-align:left}
+.hint .n{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--hot);margin-bottom:.45rem}
+.hint p{margin:0;font-size:1.02rem}
+.shake{animation:sh .4s}
+@keyframes sh{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+
+/* ---------- DOC ---------- */
+section{padding:clamp(2.6rem,7vw,4.4rem) 0;border-bottom:1.5px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+section h2{font-size:clamp(1.55rem,5vw,2.4rem);font-stretch:108%;line-height:1.05;margin-bottom:.5rem}
+section .lead{font-size:1.08rem;color:var(--ink2)}
+.brief{background:var(--ink);color:var(--paper);padding:clamp(1.4rem,4vw,2.2rem);margin-bottom:0}
+.brief .eyebrow{color:var(--warm)}
+.brief h2{color:var(--paper);font-size:clamp(1.35rem,4.4vw,2rem);margin-bottom:.7rem}
+.brief p{color:var(--pale);margin-bottom:0}
+.brief p+p{margin-top:.8em}
+.brief b{color:var(--paper)}
+.deadline{display:inline-block;margin-top:1.3rem;background:var(--hot);color:var(--paper);font-family:var(--disp);
+  font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.6rem 1.1rem}
+
+.ways{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:1.8rem}
+.way{background:var(--paper2);border:1.5px solid var(--rule);padding:1.5rem}
+.way .lbl{font-family:var(--disp);font-size:.68rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--hot);margin-bottom:.6rem}
+.way h3{font-size:1.3rem;font-stretch:104%;margin-bottom:.6rem}
+.way p{font-size:.99rem;margin-bottom:0}
+
+.opts{display:grid;gap:1.1rem;grid-template-columns:1fr;margin-top:1.8rem}
+@media (min-width:760px){.opts{grid-template-columns:repeat(2,1fr)}}
+.opt{background:var(--paper2);border:1.5px solid var(--rule);padding:1.5rem;display:flex;flex-direction:column;gap:.85rem;text-align:left;transition:.18s}
+.opt:hover{border-color:var(--mid)}
+.opt.on{border-color:var(--hot);border-width:1.5px;box-shadow:inset 0 0 0 2px var(--hot)}
+.opt .c{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--hot)}
+.opt h3{font-size:1.35rem;font-stretch:104%;line-height:1.1}
+.opt .when{font-family:var(--disp);font-size:.8rem;font-weight:500;letter-spacing:.05em;color:var(--ink2);margin-top:-.5rem}
+.opt ul{margin:0;padding-left:1.1rem;font-size:.97rem}
+.opt li{margin-bottom:.4rem}
+.opt .hk{font-size:.95rem;border-top:1.5px solid var(--rule);padding-top:.8rem;color:var(--ink2)}
+.opt .hk b{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);display:block;margin-bottom:.3rem}
+.opt .pick{margin-top:auto;font-family:var(--disp);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);border-top:1.5px solid var(--rule);padding-top:.85rem}
+.opt.on .pick{color:var(--hot)}
+
+.scroller{overflow-x:auto;border:1.5px solid var(--rule);margin-top:1.8rem;background:var(--paper2)}
+table{border-collapse:collapse;width:100%;min-width:680px;font-size:.92rem}
+th,td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{font-family:var(--disp);font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:var(--ink)}
+tbody th{font-family:var(--disp);font-weight:700;font-size:.92rem;white-space:nowrap;color:var(--ink)}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+
+.facts{display:grid;gap:.1rem 1.4rem;grid-template-columns:auto 1fr;margin-top:1.6rem;max-width:60ch}
+.facts dt{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--hot);padding-top:.45em}
+.facts dd{margin:0 0 .8rem}
+
+.group{margin-top:2.2rem}
+.group h3{font-family:var(--disp);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--hot);
+  border-bottom:1.5px solid var(--rule);padding-bottom:.55rem;margin-bottom:.3rem}
+.itm{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:.85rem 0;border-bottom:1px solid var(--rule);cursor:pointer}
+.itm:last-child{border-bottom:0}
+.star{width:22px;height:22px;border:1.5px solid var(--mid);border-radius:50%;margin-top:.3rem;flex:none;display:grid;place-items:center;
+  font-size:.8rem;color:transparent;transition:.15s}
+.itm.on .star{background:var(--hot);border-color:var(--hot);color:var(--paper)}
+.itm .nm{font-family:var(--disp);font-weight:600;font-size:1.02rem;color:var(--ink);line-height:1.3}
+.itm.on .nm{color:var(--hot)}
+.itm .nt{font-size:.95rem;color:var(--ink2);margin-top:.15rem}
+.itm .lk{font-family:var(--disp);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-top:.35rem;display:inline-block}
+
+.links{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));margin-top:1.8rem}
+.lk-card{border:1.5px solid var(--rule);background:var(--paper2);padding:1.1rem 1.2rem}
+.lk-card a{font-family:var(--disp);font-weight:700;font-size:.98rem;display:block;margin-bottom:.35rem;text-decoration:none}
+.lk-card a:hover{text-decoration:underline}
+.lk-card p{font-size:.92rem;margin:0;color:var(--ink2)}
+
+.share{margin-top:2rem;border:1.5px solid var(--ink);background:var(--paper2);padding:1.4rem}
+.share label{display:block;font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--hot);margin-bottom:.5rem}
+.share textarea,.share input[type=text]{width:100%;background:var(--paper);border:1.5px solid var(--rule);color:var(--ink);
+  font-family:var(--body);font-size:1rem;padding:.75rem .9rem;text-align:left;text-transform:none;letter-spacing:0}
+.share textarea{min-height:5.5rem;resize:vertical}
+.share pre{font-family:var(--disp);font-size:.82rem;font-weight:500;line-height:1.65;white-space:pre-wrap;background:var(--paper);
+  border:1.5px solid var(--rule);padding:1rem;overflow-x:auto;margin:1rem 0}
+.note{font-size:.95rem;color:var(--ink2);border-left:3px solid var(--warm);padding-left:1rem;margin-top:1.6rem}
+footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
+@media (max-width:560px){.facts{grid-template-columns:1fr;gap:0}.facts dt{padding-top:.6em}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="poster">
+  <svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Winterlandschaft mit Sonne, Bergen und Nadelwald">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#C9432B"/><stop offset="34%" stop-color="#DB6836"/><stop offset="66%" stop-color="#E9A84C"/><stop offset="100%" stop-color="#F1D3A0"/></linearGradient></defs>
+<linearGradient id="scrimS" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0E1E33" stop-opacity=".70"/><stop offset="55%" stop-color="#0E1E33" stop-opacity=".32"/><stop offset="100%" stop-color="#0E1E33" stop-opacity="0"/></linearGradient><rect width="800" height="340" fill="url(#sky)"/>
+<circle cx="400" cy="222" r="68" fill="#F6EEDC"/>
+<rect x="322" y="182" width="156" height="7" fill="#E9A84C" opacity=".5"/><rect x="302" y="212" width="196" height="8" fill="#E9A84C" opacity=".42"/><rect x="336" y="240" width="128" height="6" fill="#E9A84C" opacity=".38"/>
+<path d="M0 236 L96 190 L150 218 L214 176 L286 236 Z" fill="#C98F7E" opacity=".85"/>
+<path d="M520 236 L588 178 L646 212 L706 168 L800 236 Z" fill="#C98F7E" opacity=".85"/>
+<path d="M242 240 L318 200 L392 240 Z" fill="#D9A99A" opacity=".7"/>
+<path d="M0 244 H800 V286 H0 Z" fill="#A9C0D2"/>
+<g fill="#7C9AB4">
+<path d="M40 244 l14-30 14 30z"/><path d="M92 246 l16-36 16 36z"/><path d="M150 244 l13-28 13 28z"/><path d="M210 247 l15-33 15 33z"/><path d="M268 244 l12-26 12 26z"/><path d="M330 246 l16-35 16 35z"/><path d="M396 244 l13-28 13 28z"/><path d="M452 247 l15-32 15 32z"/><path d="M512 244 l12-27 12 27z"/><path d="M566 246 l16-34 16 34z"/><path d="M628 244 l13-29 13 29z"/><path d="M686 247 l15-33 15 33z"/><path d="M744 244 l13-27 13 27z"/>
+</g>
+<path d="M0 284 C140 268 250 296 380 288 C520 280 640 302 800 284 L800 340 L0 340 Z" fill="#EDF2F6"/>
+<g fill="#1E3550">
+<path d="M62 340 L62 118 L84 118 L84 340 Z"/>
+<path d="M73 96 L104 148 L42 148 Z"/><path d="M73 128 L114 190 L32 190 Z"/><path d="M73 168 L124 244 L22 244 Z"/><path d="M73 214 L134 306 L12 306 Z"/>
+<path d="M152 340 L152 176 L168 176 L168 340 Z"/>
+<path d="M160 158 L184 198 L136 198 Z"/><path d="M160 190 L192 240 L128 240 Z"/><path d="M160 228 L200 296 L120 296 Z"/>
+<path d="M736 340 L736 138 L756 138 L756 340 Z"/>
+<path d="M746 116 L776 166 L716 166 Z"/><path d="M746 152 L788 214 L704 214 Z"/><path d="M746 196 L800 276 L692 276 Z"/>
+<path d="M646 340 L646 200 L660 200 L660 340 Z"/>
+<path d="M653 184 L676 222 L630 222 Z"/><path d="M653 214 L682 260 L624 260 Z"/><path d="M653 248 L690 306 L616 306 Z"/>
+</g>
+<rect width="800" height="212" fill="url(#scrimS)"/>
+</svg>
+  <div class="cap">
+    <div class="k">Akte EH-2627</div>
+    <h1 class="poster-title">Mission Snowland</h1>
+    <div class="s">Rentiere &middot; Hunde &middot; Nordlicht &middot; Schnee</div>
+  </div>
+</div>
+
+<div id="gate">
+  <div class="gatebox">
+    <h2>Diese Seite ist mit einem Passwort verschlossen.</h2>
+    <p class="lead">Zwei Wörter öffnen sie. Ihr wollt es alle sehen — aber so nennt es sonst niemand.</p>
+    <form class="pwrow" id="pwform" autocomplete="off">
+      <input type="text" id="pw" placeholder="Passwort" aria-label="Passwort" autocomplete="off" spellcheck="false">
+      <button class="btn" type="submit">Öffnen</button>
+    </form>
+    <div class="hint" id="hint"></div>
+  </div>
+</div>
+
+<div id="doc" hidden><section class="brief"><div class="wrap measure"><p class="eyebrow">Deine Aufgabe</p><h2>Entscheide dich für einen Favoriten.</h2><p>Vier Optionen. Lies sie durch, schlaf drüber, such selbst nach, was dich interessiert — und leg dich fest. Am Sonntag legen wir alle unsere Favoriten auf den Tisch, diskutieren und stimmen ab.</p><p>Es gibt keine falsche Antwort. <b>Schau dir alles in Ruhe an und bilde dir deine Meinung, was du am liebsten machen würdest.</b></p><div class="deadline">Wir sprechen darüber: Sonntag, 13. September</div></div></section><section><div class="wrap"><div class="measure"><p class="eyebrow">Vorher</p><h2>Eine Frage entscheidet fast alles</h2><p class="lead">Beantworte sie für dich, bevor du die vier Optionen anschaust — danach fällt die Wahl viel leichter.</p></div><div class="ways"><div class="way"><div class="lbl">Weg A</div><h3>Ein Ort. Brett unter den Füßen.</h3><p>Wir bleiben die ganze Zeit an einem Ort, nehmen die Boards mit und können <b>jeden Tag fahren</b>. Drumherum Huskys, Rentiere, Nordlichter, Sauna. Das wird mit einiger Sicherheit Finnland: dort liegen Skigebiet, Hundefarmen und Rentierzüchter dicht beieinander, und die Pisten haben Flutlicht — also fahrbar, obwohl es fast den ganzen Tag dämmert. So lernen wir eine Gegend richtig kennen, statt viel zu fahren.</p></div><div class="way"><div class="lbl">Weg B</div><h3>Unterwegs. Viel sehen.</h3><p>Wir ziehen zwischen mehreren Orten um und sehen deutlich mehr: Fjell und Fjord, Fischerdorf und Rentierzaun, Nationalpark, Nachtzug. Snowboarden wäre dann an drei bis fünf Tagen dabei. Weil so eine Reise mehr Vorlauf braucht, wäre sie <b>Weihnachten 2027</b> — dafür haben wir alle Zeit der Welt, sie in Ruhe zu planen.</p></div></div></div></section><section><div class="wrap"><div class="measure"><p class="eyebrow">Die Auswahl</p><h2>Vier Optionen</h2><p class="lead">Alle vier sind machbar, und jede hat ihren eigenen Reiz. Tippe die an, die dich am meisten anlacht — deine Wahl wird unten zusammengefasst.</p></div><div class="opts" id="opts"><button class="opt" data-id="SNOW-1" type="button"><div class="c">SNOW-1 &middot; Weg A · Ein Ort</div><h3>Lappland zu Weihnachten</h3><div class="when">26.12.2026 – 09.01.2027 · 14 Nächte · Ylläs oder Levi</div><ul><li>Ylläs ist Finnlands größtes Skigebiet: 53 km Pisten, 464 Höhenmeter, und 29 der 63 Abfahrten sind flutlichtbeleuchtet.</li><li>Huskyfarmen und Rentierzüchter in dichtester Auswahl, alle in Fahrweite vom Standort.</li><li>Die Sonne kommt am 29. Dezember zurück — die kürzeste Polarnacht aller vier Optionen.</li><li>Direktflug ab Stuttgart oder Frankfurt nach Kittilä, von dort 15 km bis Levi.</li><li>Neumond am 7. Januar: die zweite Woche hat den dunkelsten Himmel.</li></ul><div class="hk"><b>Gut zu wissen</b>In knapp vier Monaten geht es los. Über Weihnachten wird Lappland meist ein Jahr im Voraus gebucht — wir würden also zügig entscheiden und aus dem wählen, was noch frei ist.</div><div class="pick">Als Favorit wählen</div></button><button class="opt" data-id="SNOW-2" type="button"><div class="c">SNOW-2 &middot; Weg A · Ein Ort</div><h3>Lappland im Fasching</h3><div class="when">05. – 14.02.2027 · 9 Nächte · Ylläs oder Levi</div><ul><li>Sechseinhalb bis knapp acht Stunden echtes Tageslicht statt Dämmerung. Man sieht, wo man fährt.</li><li>Neumond am 6. Februar — der komplette Zeitraum ist mondfrei und damit optimal für Nordlichter.</li><li>Liegt vor allen schwedischen, finnischen und norwegischen Schulferien: leere Pisten, entspannte Buchungslage.</li><li>Fünf Monate Vorlauf. Eng, aber machbar.</li><li>Gleiches Skigebiet, gleiche Huskys, gleiche Rentiere wie bei SNOW-1 — nur bei Licht.</li></ul><div class="hk"><b>Gut zu wissen</b>Neun statt vierzehn Nächte — eine kompakte Reise, dafür mit den besten Bedingungen von allen vieren.</div><div class="pick">Als Favorit wählen</div></button><button class="opt" data-id="SNOW-3" type="button"><div class="c">SNOW-3 &middot; Weg B · Unterwegs</div><h3>Finnland-Rundreise</h3><div class="when">23.12.2027 – 08.01.2028 · 16 Nächte · Rovaniemi → Ylläs → Saariselkä & Inari</div><ul><li>Drei Welten in einer Reise: Polarkreis in Rovaniemi, richtiges Skigebiet in Ylläs, echte Wildnis im Urho-Kekkonen-Nationalpark.</li><li>Inari ist das Zentrum der Sámi in Finnland — Siida-Museum, Sámi-Parlament, und Rentierbetriebe, die tatsächlich Sámi-Familien gehören statt Kostüm-Fotostopps zu sein.</li><li>Saariselkä ist das nördlichste Skigebiet Europas: 24 Pisten, 16 davon mit Flutlicht, zwei Snowparks.</li><li>Über 50 km markierte Winterwege starten direkt am Ort — Schneeschuh, Langlauf, Fatbike.</li><li>Der Nachtzug ab Helsinki mit Schlafwagen ist für viele der eigentliche Höhepunkt der Anreise.</li><li>Eine Nacht im Glasiglu lässt sich unterwegs einbauen.</li></ul><div class="hk"><b>Gut zu wissen</b>Jeder Standortwechsel braucht einen eigenen Reisetag, weil im Dezember nur rund fünf Stunden Dämmerlicht zur Verfügung stehen. Inari ist klein und gemütlich — dort lohnt es sich, früh zu buchen.</div><div class="pick">Als Favorit wählen</div></button><button class="opt" data-id="SNOW-4" type="button"><div class="c">SNOW-4 &middot; Weg B · Unterwegs</div><h3>Nordnorwegen-Rundreise</h3><div class="when">23.12.2027 – 08.01.2028 · 16 Nächte · Tromsø → Narvik → Abisko</div><ul><li>Narvikfjellet hat 870 Höhenmeter — ein echter Berg über dem Fjord, fünfmal so viel Höhenunterschied wie Saariselkä. Über Weihnachten laufen die Lifte von 10 bis 17 Uhr, genau im hellsten Fenster.</li><li>Abisko liegt im Regenschatten der norwegischen Küstenberge, ist einer der trockensten Orte Skandinaviens und damit die verlässlichste Nordlicht-Adresse überhaupt. Die Wetterversicherung der Reise.</li><li>Walbeobachtung ab Tromsø ist von November bis Ende Januar möglich — Orcas und Buckelwale folgen den Heringsschwärmen.</li><li>Camp Tamok, 90 Minuten von Tromsø, liegt in einer trockeneren Klimazone ohne Stadtlicht: Rentierschlitten und Sámi-Programm.</li><li>Der Nachtzug Stockholm–Narvik hält direkt in Abisko.</li><li>Die spektakulärste Kulisse von allen: Aurora über 900-Meter-Zacken und Meer.</li></ul><div class="hk"><b>Gut zu wissen</b>Tromsø liegt in dieser Zeit in durchgehender Polarnacht — traumhaft für Nordlichter, dunkel zum Fahren. Die Boards kämen vor allem in Narvik zum Einsatz; alternativ leihen wir sie dort einfach aus.</div><div class="pick">Als Favorit wählen</div></button></div><div class="scroller"><table><thead><tr><th>Kriterium</th><th>SNOW-1<br>Weihnachten 26</th><th>SNOW-2<br>Fasching 27</th><th>SNOW-3<br>Finnland-Rundreise</th><th>SNOW-4<br>Norwegen-Rundreise</th></tr></thead><tbody><tr><th>Zeitraum</th><td>26.12.26 – 09.01.27</td><td>05. – 14.02.27</td><td>23.12.27 – 08.01.28</td><td>23.12.27 – 08.01.28</td></tr><tr><th>Nächte</th><td>14</td><td>9</td><td>16</td><td>16</td></tr><tr><th>Tageslicht</th><td>0–2,6 h Sonne, dazu 5–6 h Dämmerung</td><td>6,5–7,8 h echtes Tageslicht</td><td>5–6 h Dämmerung, in Rovaniemi 2 h Sonne</td><td>4,6–6 h Dämmerung, Tromsø durchgehend Polarnacht</td></tr><tr><th>Nordlicht</th><td>sehr gut, Neumond am 07.01.</td><td>sehr gut, ganzer Zeitraum mondfrei</td><td>sehr gut, trockenes Binnenland</td><td>Küste durchwachsen, Abisko exzellent</td></tr><tr><th>Snowboarden</th><td>jeden Tag, Ylläs 464 Hm, viel Flutlicht</td><td>jeden Tag, bei Licht</td><td>an mehreren Tagen, Ylläs und Saariselkä</td><td>an 3–4 Tagen, dafür Narvik mit 870 Hm</td></tr><tr><th>Huskys &amp; Rentiere</th><td>dichteste Auswahl</td><td>dichteste Auswahl</td><td>Inari: echte Sámi-Betriebe</td><td>Camp Tamok bei Tromsø</td></tr><tr><th>Standortwechsel</th><td>keiner</td><td>keiner</td><td>zwei</td><td>drei</td></tr><tr><th>Anreise</th><td>Direktflug nach Kittilä</td><td>Direktflug nach Kittilä</td><td>Flug oder Nachtzug, Mietwagen vor Ort</td><td>Flug nach Tromsø, Mietwagen, Zug nach Abisko</td></tr><tr><th>Wie früh buchen</th><td>am besten zügig — je früher, desto mehr Auswahl</td><td>in den nächsten Wochen</td><td>über ein Jahr Zeit — ideal</td><td>über ein Jahr Zeit — ideal</td></tr></tbody></table></div><p class="note">Über Geld steht hier nichts. Das ist Absicht — ums Budget kümmert sich die Expeditionsleitung, ihr kümmert euch um die Frage, was ihr erleben wollt.</p><div class="share"><label for="why">Dein Favorit und warum</label><textarea id="why" placeholder="Ich bin für … weil …"></textarea><pre id="out">Wähle oben eine Option.</pre><button class="btn ghost" data-copy="out" type="button">Kopieren und in die Familiengruppe</button></div></div></section><section><div class="wrap"><div class="measure"><p class="eyebrow">Selbst weitersuchen</p><h2>Wo du mehr findest</h2><p class="lead">Alles hier sind offizielle Seiten — Skigebiete, Nationalparkverwaltung, Tourismusämter, Wetterdienste. Keine Reisebüros, keine Werbeversprechen.</p></div><div class="links"><div class="lk-card"><a href="https://ski.yllas.fi/en/slopes-and-lifts/" target="_blank" rel="noopener">Ylläs — Pisten und Lifte</a><p>Finnlands größtes Skigebiet mit Pistenplan, Höhenmetern und den beleuchteten Abfahrten.</p></div><div class="lk-card"><a href="https://skisaariselka.com/slopes/" target="_blank" rel="noopener">Ski Saariselkä</a><p>Das nördlichste Skigebiet Europas: 24 Pisten, 16 mit Flutlicht, zwei Snowparks.</p></div><div class="lk-card"><a href="https://www.narvikfjellet.no/en/openinghours.winter" target="_blank" rel="noopener">Narvikfjellet — Öffnungszeiten</a><p>Die offiziellen Liftzeiten inklusive Weihnachtsregelung, direkt vom Betreiber.</p></div><div class="lk-card"><a href="https://classic.nationalparks.fi/urhokekkonennp/trails/wintertrails" target="_blank" rel="noopener">Urho-Kekkonen-Nationalpark — Winterwege</a><p>Die finnische Forstverwaltung listet jede markierte Winterroute mit Länge und Dauer.</p></div><div class="lk-card"><a href="https://visitinari.fi/the-sami-people-reindeer-husbandry/" target="_blank" rel="noopener">Visit Inari — Sámi und Rentierhaltung</a><p>Von Sámi-Seite erklärt, wie Rentierhaltung wirklich funktioniert. Die beste Grundlage, um echtes Handwerk von Kitsch zu unterscheiden.</p></div><div class="lk-card"><a href="https://siida.fi/en/visitors/" target="_blank" rel="noopener">Siida — Sámi-Museum Inari</a><p>Ausstellungen, Freilichtmuseum und die Winteröffnungszeiten (sonntags zu).</p></div><div class="lk-card"><a href="https://www.visitnorway.com/places-to-go/northern-norway/the-lofoten-islands/winter/" target="_blank" rel="noopener">Visit Norway — Lofoten im Winter</a><p>Norwegens offizielle Seite, erfreulich ehrlich zu Polarnacht und Schneelage.</p></div><div class="lk-card"><a href="https://www.visittromso.no/whale-watching" target="_blank" rel="noopener">Visit Tromsø — Whale Watching</a><p>Wann die Wale da sind, warum sie jedes Jahr woanders stehen und wo die Touren starten.</p></div><div class="lk-card"><a href="https://auroraskystation.se/en/winter/" target="_blank" rel="noopener">Aurora Sky Station Abisko</a><p>Der Sessellift auf den Nuolja und das Abendprogramm — Tages- und Abendbetrieb sind getrennt.</p></div><div class="lk-card"><a href="https://site.uit.no/spaceweather/data-and-products/aurora/" target="_blank" rel="noopener">Weltraumwetter der Uni Tromsø</a><p>Live-Magnetometerdaten und Nordlichtkameras. Die seriöseste Quelle Nordnorwegens, ohne App-Werbung.</p></div><div class="lk-card"><a href="https://www.spaceweather.gov/products/aurora-30-minute-forecast" target="_blank" rel="noopener">NOAA — Nordlicht-Vorhersage</a><p>Die weltweite Referenzprognose. Gut, um zu verstehen, was Kp-Index und Sonnenwind wirklich bedeuten.</p></div><div class="lk-card"><a href="https://www.vr.fi/en/to-lapland-by-train" target="_blank" rel="noopener">VR — mit dem Zug nach Lappland</a><p>Der Nachtzug nach Rovaniemi und Kolari, inklusive Autoreisezug.</p></div></div><p class="note">Wenn du beim Stöbern etwas findest, das in keiner der vier Optionen vorkommt und das du unbedingt machen willst — bring es am Sonntag mit. Optionen kann man erweitern.</p></div></section>
+<footer><div class="wrap">Akte EH-2627 · Mission Snowland · Stand 04.09.2026</div></footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+var KEY="eh_snow", TARGET=1410424370;
+var HINTS=["Zwei Wörter. Sie sind uralt, und sie beschreiben etwas, das wir hoffentlich mit eigenen Augen sehen werden. Auf Deutsch heißt es anders.", "Das erste Wort ist der Name einer römischen Göttin. Das zweite geht auf einen griechischen Gott zurück. Hast du beide Namen, hast du das Passwort.", "Die Göttin ist die der Morgenröte. Der Gott ist der des Nordwinds und heißt Boreas. Zusammen ergibt das ungefähr: die Morgenröte des Nordens.", "Letzter Tipp: Es ist der wissenschaftliche Fachbegriff für das Nordlicht. Such danach — er steht im ersten Satz jedes Treffers. Groß- und Kleinschreibung ist egal."];
+function hash(s){var h=5381,i;for(i=0;i<s.length;i++){h=((h*33)^s.charCodeAt(i))>>>0}return h}
+function norm(s){return (s||"").toLowerCase().replace(/[^a-z0-9äöüß]/g,"").replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss")}
+function LSget(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}}
+function LSset(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+var gate=document.getElementById("gate"),doc=document.getElementById("doc"),hintEl=document.getElementById("hint");
+var tries=LSget(KEY+"_t",0);
+function showHint(){
+  var i=Math.min(tries,HINTS.length-1);
+  hintEl.innerHTML='<div class="n">'+(i===0?"Tipp":"Tipp "+(i+1))+'</div><p>'+HINTS[i]+'</p>';
+}
+function open_(){gate.hidden=true;doc.hidden=false;window.scrollTo(0,0);init()}
+if(LSget(KEY,false)){open_()}else{showHint()}
+document.getElementById("pwform").addEventListener("submit",function(e){
+  e.preventDefault();
+  var inp=document.getElementById("pw");
+  if(hash(norm(inp.value))===TARGET){LSset(KEY,true);open_();return}
+  tries++;LSset(KEY+"_t",tries);showHint();
+  inp.value="";inp.classList.remove("shake");void inp.offsetWidth;inp.classList.add("shake");
+});
+
+function init(){
+  if(init.done)return;init.done=true;
+  
+  var pick=LSget("eh_snow_pick",""), why=document.getElementById("why");
+  var OPTNAMES={"SNOW-1":"Lappland zu Weihnachten (26.12.2026-09.01.2027)","SNOW-2":"Lappland im Fasching (05.-14.02.2027)","SNOW-3":"Finnland-Rundreise (23.12.2027-08.01.2028)","SNOW-4":"Nordnorwegen-Rundreise (23.12.2027-08.01.2028)"};
+  why.value=LSget("eh_snow_why","");
+  function render(){
+    var els=document.querySelectorAll("#opts .opt");
+    Array.prototype.forEach.call(els,function(el){
+      var on=el.getAttribute("data-id")===pick;
+      el.classList.toggle("on",on);
+      el.querySelector(".pick").textContent=on?"Dein Favorit":"Als Favorit wählen";
+    });
+    var out=document.getElementById("out");
+    if(!pick){out.textContent="Wähle oben eine Option.";return}
+    out.textContent="MISSION SNOWLAND - mein Favorit\n"+pick+" - "+OPTNAMES[pick]+
+      (why.value.trim()?"\n\n"+why.value.trim():"");
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("#opts .opt"),function(el){
+    el.addEventListener("click",function(){pick=el.getAttribute("data-id");LSset("eh_snow_pick",pick);render()});
+  });
+  why.addEventListener("input",function(){LSset("eh_snow_why",why.value);render()});
+  render();
+
+  var cp=document.querySelectorAll("[data-copy]");
+  Array.prototype.forEach.call(cp,function(b){
+    b.addEventListener("click",function(){
+      var t=document.getElementById(b.getAttribute("data-copy")).textContent,old=b.textContent;
+      function ok(){b.textContent="Kopiert";setTimeout(function(){b.textContent=old},1600)}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,ok)}
+      else{var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();
+        try{document.execCommand("copy")}catch(e){}document.body.removeChild(ta);ok()}
+    });
+  });
+}
+})();
+</script>
+</body>
+</html>
