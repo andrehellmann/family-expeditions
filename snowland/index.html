@@ -255,8 +255,8 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
 
 <div id="gate">
   <div class="gatebox">
-    <h2>Diese Seite ist mit einem Passwort verschlossen.</h2>
-    <p class="lead">Zwei Wörter öffnen sie. Ihr wollt es alle sehen — aber so nennt es sonst niemand.</p>
+    <h2>Der Plan steht. Aber erst einmal ist wieder zu.</h2>
+    <p class="lead">Beim letzten Mal waren es zwei Wörter. Diesmal sind es zwei Zahlen — sie beschreiben eine Linie, die wir auf dieser Reise zu Fuß überqueren werden.</p>
     <form class="pwrow" id="pwform" autocomplete="off">
       <input type="text" id="pw" placeholder="Passwort" aria-label="Passwort" autocomplete="off" spellcheck="false">
       <button class="btn" type="submit">Öffnen</button>
@@ -498,8 +498,8 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
 <script>
 (function(){
 "use strict";
-var KEY="eh_snow", TARGET=1410424370;
-var HINTS=["Zwei Wörter. Sie sind uralt, und sie beschreiben etwas, das wir hoffentlich mit eigenen Augen sehen werden. Auf Deutsch heißt es anders.", "Das erste Wort ist der Name einer römischen Göttin. Das zweite geht auf einen griechischen Gott zurück. Hast du beide Namen, hast du das Passwort.", "Die Göttin ist die der Morgenröte. Der Gott ist der des Nordwinds und heißt Boreas. Zusammen ergibt das ungefähr: die Morgenröte des Nordens.", "Letzter Tipp: Es ist der wissenschaftliche Fachbegriff für das Nordlicht. Such danach — er steht im ersten Satz jedes Treffers. Groß- und Kleinschreibung ist egal."];
+var KEY="eh_snow2", TARGET=2085776165;
+var HINTS=["Diesmal keine Wörter. Zwei Zahlen öffnen die Seite.", "Die Zahlen beschreiben eine Linie, die es gar nicht wirklich gibt — man kann sie trotzdem überschreiten. Und wir werden es tun.", "Nördlich dieser Linie geht die Sonne an mindestens einem Tag im Jahr überhaupt nicht auf. Die erste Zahl sind Grad, die zweite Minuten.", "Letzter Tipp: Such nach „nördlicher Polarkreis Breitengrad“. Die beiden Zahlen einfach hintereinander eintippen — Gradzeichen, Leerzeichen und Hochkomma sind egal."];
 function hash(s){var h=5381,i;for(i=0;i<s.length;i++){h=((h*33)^s.charCodeAt(i))>>>0}return h}
 function norm(s){return (s||"").toLowerCase().replace(/[^a-z0-9äöüß]/g,"").replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss")}
 function LSget(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}}
