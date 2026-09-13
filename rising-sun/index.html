@@ -231,8 +231,7 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
 
 <div id="gate">
   <div class="gatebox">
-    <h2>Diese Seite ist mit einem Passwort verschlossen.</h2>
-    <p class="lead">Ein Wort öffnet sie. Wenn du an Japan denkst, siehst du es wahrscheinlich sofort vor dir.</p>
+    <h2>Der Plan steht. Ein neues Wort öffnet ihn.</h2><p class="lead">In einer Stadt auf unserem Weg leben über tausend von ihnen frei zwischen den Tempeln.</p><p>Seit mehr als tausend Jahren gelten sie dort als Boten der Götter. Und sie verbeugen sich tatsächlich &mdash; wenn man sie höflich genug fragt. Eine von euch hat sie sich gewünscht, und sie stehen im Plan. <b>Wie heißen sie auf Japanisch?</b></p>
     <form class="pwrow" id="pwform" autocomplete="off">
       <input type="text" id="pw" placeholder="Passwort" aria-label="Passwort" autocomplete="off" spellcheck="false">
       <button class="btn" type="submit">Öffnen</button>
@@ -248,8 +247,8 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
 <script>
 (function(){
 "use strict";
-var KEY="eh_sun", TARGET=1744223809;
-var HINTS=["Ein Wort, acht Buchstaben. Es ist der höchste Punkt eines ganzen Landes, ein schlafender Vulkan — und seit 2013 UNESCO-Welterbe, bemerkenswerterweise nicht als Naturdenkmal, sondern als Kulturstätte.", "Er ist 3.776 Meter hoch. Auf Japanisch trägt er mehrere Namen; gesucht ist die alte Lesart, die sich im Westen durchgesetzt hat.", "Diese Lesart endet auf -yama. Das ist das japanische Wort für Berg. Der Rest sind vier Buchstaben und beginnt mit F.", "Letzter Tipp: Such nach <em>höchster Berg Japans alte westliche Bezeichnung yama</em>. Ein Wort, acht Buchstaben, Groß- und Kleinschreibung egal."];
+var KEY="eh_shika", TARGETS=[196028221,2088347477,2166182302,4102900834,196027957];
+var HINTS=["Fünf Buchstaben, ein Tier. Groß- und Kleinschreibung ist egal.", "Die Stadt liegt bei Osaka und war lange vor Kyoto einmal Japans Hauptstadt. Ihr Park ist der älteste des Landes — und die Tiere gehören dort niemandem.", "Auf Deutsch sagt man Reh oder Hirsch. Gesucht ist das japanische Wort dafür, geschrieben mit unseren Buchstaben.", "Letzter Tipp: Such nach <em>Nara Park Rehe japanisches Wort</em>. Fünf Buchstaben, beginnt mit S."];
 function hash(s){var h=5381,i;for(i=0;i<s.length;i++){h=((h*33)^s.charCodeAt(i))>>>0}return h}
 function norm(s){return (s||"").toLowerCase().replace(/[^a-z0-9äöüß]/g,"").replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss")}
 function LSget(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}}
@@ -266,7 +265,7 @@ if(LSget(KEY,false)){open_()}else{showHint()}
 document.getElementById("pwform").addEventListener("submit",function(e){
   e.preventDefault();
   var inp=document.getElementById("pw");
-  if(hash(norm(inp.value))===TARGET){LSset(KEY,true);open_();return}
+  if(TARGETS.indexOf(hash(norm(inp.value)))>=0){LSset(KEY,true);open_();return}
   tries++;LSset(KEY+"_t",tries);showHint();
   inp.value="";inp.classList.remove("shake");void inp.offsetWidth;inp.classList.add("shake");
 });
