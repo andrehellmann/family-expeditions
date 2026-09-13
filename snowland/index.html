@@ -216,6 +216,11 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
 .gm-place{font-family:Archivo,Arial,sans-serif;font-size:25px;font-weight:700;fill:#1E3550}
 .gm-sub{font-family:Archivo,Arial,sans-serif;font-size:17px;font-weight:600;fill:#3F5E7C}
 .gm-place,.gm-sub,.gm-arclab{paint-order:stroke;stroke:#EDE2D0;stroke-width:5px;stroke-linejoin:round}
+
+.mp-mode{font-family:var(--disp);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;fill:var(--ink)}
+.mp-num{font-family:var(--disp);font-size:13.5px;font-weight:600;fill:var(--ink2);font-variant-numeric:tabular-nums}
+.mp-name{font-family:var(--disp);font-size:13px;font-weight:600;font-style:italic;fill:var(--hot)}
+.mp-mode,.mp-num,.mp-name{paint-order:stroke;stroke:#EDE2D0;stroke-width:5px;stroke-linejoin:round}
 </style>
 </head>
 <body>
@@ -273,62 +278,60 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
 <div class="measure"><p class="eyebrow">Die Route</p><h2>Einmal hoch und wieder runter</h2><p class="lead">Zwei Bahnachsen führen nach Norden — eine finnische ab Helsinki, eine schwedische ab Stockholm. Wir fahren die eine hoch, springen oben über die Nordspitze und kommen auf der anderen zurück.</p></div>
 
 <figure class="mapfig">
-<svg viewBox="0 0 820 660" role="img" aria-label="Schematische Karte der Reiseroute von Frankfurt über Helsinki, Rovaniemi, Tromsø, Harstad, Narvik und Abisko nach Stockholm und zurück">
-  <rect width="820" height="660" fill="none"/>
-  <path class="mp-circle" d="M30 330 C 260 300, 470 245, 800 158"/>
-  <text class="mp-pk" x="40" y="320">Polarkreis 66&deg;33&prime;</text>
-  <text class="mp-country" x="58" y="70">NORWEGEN</text>
-  <text class="mp-country" x="600" y="472" text-anchor="middle">SCHWEDEN</text>
-  <text class="mp-country" x="608" y="238" text-anchor="middle">FINNLAND</text>
-
-  <path class="mp-fly"    d="M170 590 Q 430 520 645 385"/>
-  <path class="mp-ntrain" d="M645 385 C 700 315 700 215 665 135"/>
-  <path class="mp-fly"    d="M665 135 Q 480 62 300 105"/>
-  <path class="mp-ship"   d="M300 105 Q 246 126 250 165"/>
-  <path class="mp-bus"    d="M250 165 L 345 190"/>
-  <path class="mp-train"  d="M345 190 L 440 205"/>
-  <path class="mp-ntrain" d="M440 205 C 456 275 462 340 470 410"/>
-  <path class="mp-fly"    d="M470 410 Q 320 522 170 590"/>
-
-  <text class="mp-leg" x="415" y="512" text-anchor="middle">Flug &middot; ca. 2&frac12; h</text>
-  <text class="mp-leg" x="676" y="288" text-anchor="end">Santa Claus Express</text>
-  <text class="mp-leg" x="480" y="52" text-anchor="middle">Flug &middot; ca. 1&frac12; h</text>
-  <text class="mp-leg" x="238" y="120" text-anchor="end">Postschiff</text>
-  <text class="mp-leg" x="292" y="196" text-anchor="middle">Bus</text>
-  <text class="mp-leg" x="393" y="222" text-anchor="middle">Zug</text>
-  <text class="mp-leg" x="476" y="310" text-anchor="start">Nachtzug &middot; ca. 17 h</text>
-  <text class="mp-leg" x="404" y="622" text-anchor="middle">Flug nach Hause</text>
-
-  <g class="mp-badge"><circle cx="645" cy="385" r="15"/><text x="645" y="391">1</text></g>
-  <text class="mp-place" x="622" y="378" text-anchor="end">Helsinki</text>
-  <text class="mp-sub"   x="622" y="396" text-anchor="end">1 Nacht</text>
-
-  <g class="mp-badge"><circle cx="665" cy="135" r="15"/><text x="665" y="141">2</text></g>
-  <text class="mp-place" x="665" y="112" text-anchor="middle">Rovaniemi</text>
-  <text class="mp-sub"   x="665" y="172" text-anchor="middle">2 N&auml;chte</text>
-
-  <g class="mp-badge"><circle cx="300" cy="105" r="15"/><text x="300" y="111">3</text></g>
-  <text class="mp-place" x="300" y="82" text-anchor="middle">Troms&oslash;</text>
-  <text class="mp-sub"   x="322" y="112" text-anchor="start">3 N&auml;chte</text>
-
-  <circle class="mp-dot" cx="250" cy="165" r="6"/>
-  <text class="mp-sub" x="238" y="170" text-anchor="end">Harstad</text>
-
-  <g class="mp-badge"><circle cx="345" cy="190" r="15"/><text x="345" y="196">4</text></g>
-  <text class="mp-place" x="345" y="234" text-anchor="middle">Narvik</text>
-  <text class="mp-sub"   x="345" y="252" text-anchor="middle">2 N&auml;chte</text>
-
-  <g class="mp-badge"><circle cx="440" cy="205" r="15"/><text x="440" y="211">5</text></g>
-  <text class="mp-place" x="462" y="200" text-anchor="start">Abisko</text>
-  <text class="mp-sub"   x="462" y="218" text-anchor="start">2 N&auml;chte</text>
-
-  <g class="mp-badge"><circle cx="470" cy="410" r="15"/><text x="470" y="416">6</text></g>
-  <text class="mp-place" x="448" y="404" text-anchor="end">Stockholm</text>
-  <text class="mp-sub"   x="448" y="422" text-anchor="end">2 N&auml;chte</text>
-
-  <circle class="mp-dot" cx="170" cy="590" r="7"/>
-  <text class="mp-place" x="188" y="586" text-anchor="start">Frankfurt</text>
-  <text class="mp-sub"   x="188" y="604" text-anchor="start">Start und Ziel</text>
+<svg viewBox="0 0 880 720" role="img" aria-label="Schematische Karte der Reiseroute mit Verkehrsmitteln, Fahrzeiten und Entfernungen" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo5M2E0ZThhMC0wMGE2LTQ5ZmEtYWEzYi1iZTkzYmQ3NmU5OTIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGjO63dULYKZzcCBz2JH08sAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDowOTNhZjJjYi1mOGE0LTQ5YzMtOTlkOS1lYzU5ZjM4YzU4NzBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNohEIPJ1919TnCLdkRg+fZRgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggcfDGx4SCReXCiRckXcDuVO7zDoCkh/etUxTmaekuaN+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaHiWC9I3l3sVuXG6Rk6QYpwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDhA2iw3wh7RBodC3iKHravotyn9EhCxbu+wIwGIUNobWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjFZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjkzYTRlOGEwLTAwYTYtNDlmYS1hYTNiLWJlOTNiZDc2ZTk5Mi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjc2Y2MyYmNlLWY3MDEtNDVjZS1iN2ZkLTdhYzZjYzEyYTU2NXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBx8MbHhIJF5cKJFyRdwO5U7vMOgKSH961TFOZp6S5o36JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggkzF2x1zDfSv+4cBdttZbpkUvkJ9uDskk/xGyTFQfTRyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg8t+ZRwdyp8Yyi2VDi2lVwHsM3sZXqw1mJpie0yN6zWp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCWhn21BC6MGSlOD7HMRyxUYzDPktaYM0ZI8tquut+kX961S0kvX6KQB99TEHJbZ85Hy8KHWubUcr4zwQncMGzk=</c2pa:manifest></metadata>
+  <path class="mp-circle" d="M30 360 C 280 330, 500 268, 866 168"/>
+  <text class="mp-pk" x="36" y="350">Polarkreis 66&#176;33&#8242;</text>
+  <text class="mp-country" x="58" y="62">NORWEGEN</text>
+  <text class="mp-country" x="368" y="400" text-anchor="middle">SCHWEDEN</text>
+  <text class="mp-country" x="790" y="336" text-anchor="middle">FINNLAND</text>
+  <path class="mp-fly" d="M150 640 Q 420 570 650 400"/>
+  <path class="mp-ntrain" d="M650 400 C 578 330 578 205 675 130"/>
+  <path class="mp-fly" d="M675 130 Q 470 45 285 95"/>
+  <path class="mp-ship" d="M285 95 Q 222 122 225 175"/>
+  <path class="mp-bus" d="M225 175 L 355 215"/>
+  <path class="mp-train" d="M355 215 L 470 235"/>
+  <path class="mp-ntrain" d="M470 235 C 495 305 500 375 480 445"/>
+  <path class="mp-fly" d="M480 445 Q 300 590 150 640"/>
+  <text class="mp-mode" x="410" y="572" text-anchor="middle">Flug</text>
+  <text class="mp-num" x="410" y="590" text-anchor="middle">ca. 2½ h · 1.540 km</text>
+  <text class="mp-mode" x="716" y="256" text-anchor="start">Nachtzug</text>
+  <text class="mp-num" x="716" y="274" text-anchor="start">ca. 12 h · 830 km</text>
+  <text class="mp-name" x="716" y="293" text-anchor="start">Santa Claus Express</text>
+  <text class="mp-mode" x="475" y="44" text-anchor="middle">Flug</text>
+  <text class="mp-num" x="475" y="62" text-anchor="middle">ca. 1½ h · 450 km</text>
+  <text class="mp-mode" x="210" y="124" text-anchor="end">Postschiff</text>
+  <text class="mp-num" x="210" y="142" text-anchor="end">ca. 6½ h · 190 km</text>
+  <text class="mp-mode" x="272" y="216" text-anchor="end">Bus</text>
+  <text class="mp-num" x="272" y="234" text-anchor="end">ca. 2¼ h · 120 km</text>
+  <text class="mp-mode" x="415" y="178" text-anchor="middle">Zug</text>
+  <text class="mp-num" x="415" y="196" text-anchor="middle">ca. 1¾ h · 70 km</text>
+  <text class="mp-mode" x="452" y="330" text-anchor="end">Nachtzug</text>
+  <text class="mp-num" x="452" y="348" text-anchor="end">ca. 17 h · 1.400 km</text>
+  <text class="mp-mode" x="290" y="548" text-anchor="end">Flug</text>
+  <text class="mp-num" x="290" y="566" text-anchor="end">ca. 2½ h · 1.220 km</text>
+  <circle class="mp-dot2" cx="225" cy="175" r="6"/>
+  <text class="mp-sub" x="207" y="172" text-anchor="end">Harstad</text>
+  <circle class="mp-dot2" cx="150" cy="640" r="7"/>
+  <text class="mp-place" x="150" y="674" text-anchor="middle">Frankfurt</text>
+  <text class="mp-sub" x="150" y="692" text-anchor="middle">Start und Ziel</text>
+  <g class="mp-badge"><circle cx="650" cy="400" r="15"/><text x="650" y="406">1</text></g>
+  <text class="mp-place" x="628" y="394" text-anchor="end">Helsinki</text>
+  <text class="mp-sub" x="628" y="412" text-anchor="end">1 Nacht</text>
+  <g class="mp-badge"><circle cx="675" cy="130" r="15"/><text x="675" y="136">2</text></g>
+  <text class="mp-place" x="675" y="104" text-anchor="middle">Rovaniemi</text>
+  <text class="mp-sub" x="690" y="170" text-anchor="start">2 Nächte</text>
+  <g class="mp-badge"><circle cx="285" cy="95" r="15"/><text x="285" y="101">3</text></g>
+  <text class="mp-place" x="307" y="88" text-anchor="start">Tromsø</text>
+  <text class="mp-sub" x="307" y="106" text-anchor="start">3 Nächte</text>
+  <g class="mp-badge"><circle cx="355" cy="215" r="15"/><text x="355" y="221">4</text></g>
+  <text class="mp-place" x="355" y="258" text-anchor="middle">Narvik</text>
+  <text class="mp-sub" x="355" y="276" text-anchor="middle">2 Nächte</text>
+  <g class="mp-badge"><circle cx="470" cy="235" r="15"/><text x="470" y="241">5</text></g>
+  <text class="mp-place" x="492" y="230" text-anchor="start">Abisko</text>
+  <text class="mp-sub" x="492" y="248" text-anchor="start">2 Nächte</text>
+  <g class="mp-badge"><circle cx="480" cy="445" r="15"/><text x="480" y="451">6</text></g>
+  <text class="mp-place" x="458" y="440" text-anchor="end">Stockholm</text>
+  <text class="mp-sub" x="458" y="458" text-anchor="end">2 Nächte</text>
 </svg>
 <div class="legend">
   <div><i style="border-color:#3F5E7C;border-top-style:dotted"></i>Flug</div>
@@ -347,6 +350,7 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
   <div><b>2</b><small>N&auml;chte im Zug</small></div>
   <div><b>1</b><small>Nacht auf See</small></div>
   <div><b>3</b><small>L&auml;nder</small></div>
+  <div><b>5.800</b><small>Kilometer</small></div>
 </div>
 <p class="note">Schematische Darstellung, nicht ma&szlig;stabsgetreu. Alle Zeiten sind Erfahrungswerte aus den aktuellen Fahrpl&auml;nen — die Fahrpl&auml;ne f&uuml;r den Winter 2027/28 werden erst sp&auml;ter ver&ouml;ffentlicht.</p>
 <div class="measure geo-intro"><p class="eyebrow">Und einmal richtig</p><h2>Dieselbe Reise auf der Landkarte</h2><p class="lead">Nur die Stopps, echte Geografie, richtige Küsten — damit man einmal gesehen hat, wo das alles wirklich liegt. Rovaniemi sitzt genau auf dem Polarkreis, alles darüber liegt im Winter in der Dämmerung.</p></div>
@@ -393,10 +397,10 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
 <div class="dest">
   <div class="hd"><span class="no">Etappe 01</span><h3>Helsinki</h3><span class="when">25. &ndash; 26.12. &middot; 1 Nacht</span></div>
   <div class="bd"><dl class="row">
-    <dt>Hinkommen</dt><dd>Flug ab <b>Frankfurt</b> am Abend des 25.12., rund 2&frac12; Stunden &mdash; <a href="https://www.lufthansa.com" target="_blank" rel="noopener">Lufthansa</a> oder <a href="https://www.finnair.com" target="_blank" rel="noopener">Finnair</a>.</dd>
+    <dt>Hinkommen</dt><dd>Flug ab <b>Frankfurt</b> am Abend des 25.12., rund 2&frac12; Stunden f&uuml;r 1.540 Kilometer &mdash; <a href="https://www.lufthansa.com" target="_blank" rel="noopener">Lufthansa</a> oder <a href="https://www.finnair.com" target="_blank" rel="noopener">Finnair</a>.</dd>
     <dt>Programm</dt><dd>Ein ganzer Tag Helsinki: Hafen, Markthalle, Kathedrale, Design-Viertel. Ein ruhiger Auftakt, bevor es nach Norden geht.</dd>
     <dt>Schlafen</dt><dd>Hotel in der Innenstadt, in Laufweite zum Hauptbahnhof.</dd>
-    <dt>Weiter</dt><dd><span class="tag">Nachtzug</span> Am Abend des 26.12. in den <a href="https://www.vr.fi/en/night-trains/santa-claus-express" target="_blank" rel="noopener">Santa Claus Express</a>, Schlafwagen, rund 12 Stunden. Man schl&auml;ft ein und wacht 800 Kilometer weiter n&ouml;rdlich auf.</dd>
+    <dt>Weiter</dt><dd><span class="tag">Nachtzug</span> Am Abend des 26.12. in den <a href="https://www.vr.fi/en/night-trains/santa-claus-express" target="_blank" rel="noopener">Santa Claus Express</a>, Schlafwagen: 830 Kilometer in rund 12 Stunden. Man schl&auml;ft ein und wacht am Polarkreis wieder auf.</dd>
   </dl></div>
 </div>
 
@@ -408,7 +412,7 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
       <li><b>28.12.</b> &mdash; Husky-Tour bei <a href="https://bearhillhusky.com/" target="_blank" rel="noopener">Bearhill Husky</a>: Maya, Ella und Noah lenken ihr eigenes Gespann. Abends Eisrestaurant.</li>
     </ul></dd>
     <dt>Schlafen</dt><dd>Zwei N&auml;chte im <b>Glasiglu</b> &mdash; <a href="https://arcticsnowhotel.fi/" target="_blank" rel="noopener">Arctic SnowHotel &amp; Glass Igloos</a> oder <a href="https://apukkaresort.fi/" target="_blank" rel="noopener">Apukka Resort</a>. Nordlicht aus dem Bett heraus, falls es sich zeigt.</dd>
-    <dt>Weiter</dt><dd><span class="tag">Flug</span> Am 29.12. mit <a href="https://www.finnair.com" target="_blank" rel="noopener">Finnair</a> nach Troms&oslash;, rund 1&frac12; Stunden. Der Sprung von Ost- nach West-Lappland.</dd>
+    <dt>Weiter</dt><dd><span class="tag">Flug</span> Am 29.12. mit <a href="https://www.finnair.com" target="_blank" rel="noopener">Finnair</a> nach Troms&oslash;, rund 1&frac12; Stunden f&uuml;r 450 Kilometer. Der Sprung von Ost- nach West-Lappland.</dd>
   </dl></div>
 </div>
 
@@ -422,20 +426,20 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
       <li><b>01.01.</b> &mdash; Neujahr in Ruhe angehen lassen.</li>
     </ul></dd>
     <dt>Schlafen</dt><dd>Apartment f&uuml;r f&uuml;nf &mdash; <a href="https://tromsocamping.no/" target="_blank" rel="noopener">Troms&oslash; Lodge &amp; Camping</a> oder <a href="https://www.strawberry.no/hotell/norge/tromso/clarion-collection-hotel-aurora/" target="_blank" rel="noopener">Clarion Collection Hotel Aurora</a>.</dd>
-    <dt>Weiter</dt><dd><span class="tag">Postschiff</span> In der Nacht zum 2.1. an Bord der <a href="https://www.hurtigruten.de/" target="_blank" rel="noopener">Hurtigruten</a> nach Harstad, rund 6&frac34; Stunden durch die Fjorde &mdash; mit eigenen Kabinen. Ankunft am fr&uuml;hen Morgen.</dd>
+    <dt>Weiter</dt><dd><span class="tag">Postschiff</span> In der Nacht zum 2.1. an Bord der <a href="https://www.hurtigruten.de/" target="_blank" rel="noopener">Hurtigruten</a> nach Harstad, rund 6&frac12; Stunden und 190 Kilometer durch die Fjorde &mdash; mit eigenen Kabinen. Ankunft am fr&uuml;hen Morgen.</dd>
   </dl></div>
 </div>
 
 <div class="dest">
   <div class="hd"><span class="no">Etappe 04</span><h3>Narvik</h3><span class="when">02. &ndash; 03.01. &middot; 2 N&auml;chte</span></div>
   <div class="bd"><dl class="row">
-    <dt>Hinkommen</dt><dd><span class="tag">Bus</span> Ab Harstad rund 2 Stunden Linienbus am Fjord entlang nach Narvik.</dd>
+    <dt>Hinkommen</dt><dd><span class="tag">Bus</span> Ab Harstad 120 Kilometer Linienbus am Fjord entlang nach Narvik, rund 2&frac14; Stunden.</dd>
     <dt>Programm</dt><dd><ul>
       <li><b>02.01.</b> &mdash; Bretter leihen und gleich aufs Flutlicht: <a href="https://www.narvikfjellet.no/" target="_blank" rel="noopener">Narvikfjellet</a> hat 870 H&ouml;henmeter direkt &uuml;ber dem Wasser.</li>
       <li><b>03.01.</b> &mdash; Ein ganzer Tag Snowboarden mit Fjordblick. Die Gondel startet mitten im Ort.</li>
     </ul></dd>
     <dt>Schlafen</dt><dd>H&uuml;tte oder Apartment &mdash; <a href="https://www.camp291.no/" target="_blank" rel="noopener">Camp 291</a>.</dd>
-    <dt>Weiter</dt><dd><span class="tag">Zug</span> Am 04.01. mit dem <a href="https://arctictrain.com/" target="_blank" rel="noopener">Arctic Train</a> &uuml;ber die Ofotbanen nach Abisko &mdash; 1&frac34; Stunden Panoramastrecke durch die Berge, eine der spektakul&auml;rsten Bahnstrecken Europas.</dd>
+    <dt>Weiter</dt><dd><span class="tag">Zug</span> Am 04.01. mit dem <a href="https://arctictrain.com/" target="_blank" rel="noopener">Arctic Train</a> &uuml;ber die Ofotbanen nach Abisko &mdash; 70 Kilometer in 1&frac34; Stunden Panoramastrecke durch die Berge, eine der spektakul&auml;rsten Bahnstrecken Europas.</dd>
   </dl></div>
 </div>
 
@@ -447,7 +451,7 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
       <li><b>05.01.</b> &mdash; Schneeschuhwandern im <a href="https://sverigesnationalparker.se/park/abisko-nationalpark/" target="_blank" rel="noopener">Nationalpark Abisko</a>: Lapporten, der zugefrorene Tornetr&auml;sk, Startpunkt des Kungsleden.</li>
     </ul></dd>
     <dt>Schlafen</dt><dd>Bergh&uuml;tte &mdash; <a href="https://bjorkliden.com/" target="_blank" rel="noopener">Bj&ouml;rkliden Fj&auml;llby</a> oder <a href="https://www.swedishtouristassociation.com/facilities/stf-abisko-turiststation/" target="_blank" rel="noopener">STF Abisko Turiststation</a>.</dd>
-    <dt>Weiter</dt><dd><span class="tag">Nachtzug</span> Am Abend des 06.01. in den <a href="https://www.sj.se/en" target="_blank" rel="noopener">Nachtzug nach Stockholm</a> &mdash; rund 17 Stunden quer durch die schwedische Winternacht, im Schlafwagen. Die l&auml;ngste und sch&ouml;nste Zugfahrt der Reise.</dd>
+    <dt>Weiter</dt><dd><span class="tag">Nachtzug</span> Am Abend des 06.01. in den <a href="https://www.sj.se/en" target="_blank" rel="noopener">Nachtzug nach Stockholm</a> &mdash; rund 17 Stunden und 1.400 Kilometer quer durch die schwedische Winternacht, im Schlafwagen. Die l&auml;ngste und sch&ouml;nste Zugfahrt der Reise.</dd>
   </dl></div>
 </div>
 
@@ -459,7 +463,7 @@ footer{padding:2.4rem 0 3.4rem;font-family:var(--disp);font-size:.68rem;font-wei
       <li><b>08.01.</b> &mdash; Puffertag: Museen, Shopping, Zimtschnecken. Wer noch etwas auf der Liste hat, macht es heute.</li>
     </ul></dd>
     <dt>Schlafen</dt><dd>Hotel in der Innenstadt &mdash; <a href="https://www.scandichotels.com/hotels/sweden/stockholm/downtown-camper-by-scandic" target="_blank" rel="noopener">Downtown Camper by Scandic</a>.</dd>
-    <dt>Heimweg</dt><dd><span class="tag">Flug</span> Am 09.01. ab Stockholm-Arlanda zur&uuml;ck nach Frankfurt, rund 2&frac12; Stunden &mdash; <a href="https://www.flysas.com/" target="_blank" rel="noopener">SAS</a> oder <a href="https://www.lufthansa.com" target="_blank" rel="noopener">Lufthansa</a>.</dd>
+    <dt>Heimweg</dt><dd><span class="tag">Flug</span> Am 09.01. ab Stockholm-Arlanda zur&uuml;ck nach Frankfurt, rund 2&frac12; Stunden f&uuml;r 1.220 Kilometer &mdash; <a href="https://www.flysas.com/" target="_blank" rel="noopener">SAS</a> oder <a href="https://www.lufthansa.com" target="_blank" rel="noopener">Lufthansa</a>.</dd>
   </dl></div>
 </div>
 
